@@ -1,0 +1,121 @@
+.body_one{
+    width:1300px;
+    height: 800px;
+    background: black;
+    }
+svg{
+    z-index: 0;
+}
+
+.fire{
+    position:absolute;
+    top: 20px;
+    left: 410px;
+    z-index: 1;
+    width: 140px;
+    height: 350px;
+    border-radius: 50%;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 1925%;
+    background: radial-gradient(circle, rgba(255, 132, 0, 0.83) 0%, rgba(213,172,36,0) 69%);
+    filter: blur(3px);
+    transform:rotate(-45%);
+    animation: light 1.5s linear infinite;
+
+}
+
+.fire::before{
+    content: '';
+    position:absolute;
+    top: 100px;
+    left: 5px;
+    width:130px;
+    height: 250px;
+    border-radius: 50%;
+    border-top-right-radius: 0;
+    background: radial-gradient(circle, rgba(252, 182, 0, 0.83) 0%, rgba(213, 98, 36, 0) 69%);
+    z-index: 0;
+}
+.fire::after{
+    content: '';
+    position:absolute;
+    top: 170px;
+    left: 20px;
+    width:100px;
+    height:150px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(249, 249, 249, 0.83) 0%, rgba(255, 255, 255, 0) 69%);
+    filter: blur(6px);
+    z-index: 2;
+}
+
+@keyframes light{
+    20%{
+    border-top-left-radius: 1925%;
+    border-top-right-radius: 25%;
+    transform:translateY(0px);
+    }
+    60%{
+    transform:translateY(-20px);
+    }
+    100%{
+    border-top-left-radius: 25%;
+    border-top-right-radius: 1925%;
+    transform:translateY(0px);
+    }
+}
+/*primary color*/
+.bg-cream {
+    background-color: #FFF2E1;
+}
+
+/*font*/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-yellow-500 {
+    background-color: #F48C06;
+}
+.text-yellow-500 {
+    color: #F48C06;
+}
+.floating { 
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+} 
+@keyframes floating { 
+    0% { transform: translate(0, 0px); } 
+    50% { transform: translate(0, 8px); } 
+    100% { transform: translate(0, -0px); }  
+} 
+.floating-4 { 
+    animation-name: floating; 
+    animation-duration: 4s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out;
+} 
+@keyframes floating-4 { 
+    0% { transform: translate(0, 0px); } 
+    50% { transform: translate(0, 8px); } 
+    100% { transform: translate(0, -0px); }  
+}
+.text-darken {
+    color: #2F327D;
+}
+/* @import 'skilline.css'; */
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+
