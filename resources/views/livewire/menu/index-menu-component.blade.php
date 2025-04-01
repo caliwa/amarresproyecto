@@ -328,12 +328,12 @@
 @endassets
 @script
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS when everything is ready
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Initialize AOS when everything is ready
+//     AOS.init({
+//         duration: 1000,
+//         once: true
+//     });
     document.addEventListener('livewire:initialized', () => {
         
         // Obtener elementos del reproductor principal
@@ -513,7 +513,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
-});
+// });
 </script>
 @endscript
 <div>
