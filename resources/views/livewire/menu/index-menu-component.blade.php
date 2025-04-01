@@ -559,7 +559,7 @@
 		<div class="whatsapp-message">
 			<div class="message-bubble">
 				Hola! Te estoy esperando en el chat para agendar tu sesión de protección energética personalizada. ¿Hablamos?
-				<div class="message-time">11:42 AM</div>
+                <div class="message-time">{{ now()->format('h:i A') }}</div>
 			</div>
 		</div>
 		<div class="whatsapp-cta">
