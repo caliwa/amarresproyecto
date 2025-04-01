@@ -57,8 +57,6 @@
                 <div class="text-center pb-16 pt-5">
                     <label class="text-gray-300 font-semibold"></label>
                     <div class="px-5 sm:px-0 flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0 justify-center mt-3">
-                        <input type="email" placeholder="Your Email" class="rounded-full py-2 pl-5 bg-transparent border border-gray-400">
-                        <button type="submit" class="text-white w-40 sm:w-auto mx-auto sm:mx-0 font-semibold px-5 py-2 rounded-full" style="background: linear-gradient(105.5deg, #545AE7 19.57%, #393FCF 78.85%);">Subscribe</button>
                     </div>
                 </div>
                 {{-- <div class="flex items-center text-gray-400 text-sm justify-center">
