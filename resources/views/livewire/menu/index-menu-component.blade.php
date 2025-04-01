@@ -299,6 +299,32 @@
     min-width: 40px;
     text-align: center;
 }
+
+/**/
+.testimonial-player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.testimonial-btn {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+}
+
+.testimonial-progress {
+    height: 4px !important;
+}
+
+.testimonial-time {
+    font-size: 11px !important;
+    min-width: 35px !important;
+}
     </style>
 @endassets
 @script
@@ -395,6 +421,126 @@
             bar.style.animationPlayState = 'paused';
         });
     });
+
+    //OTROOOOOOOOOOO
+    setupTestimonialPlayer('audio1', 'playButton1', 'progressBar1', 'timeDisplay1');
+    setupTestimonialPlayer('audio2', 'playButton2', 'progressBar2', 'timeDisplay2');
+
+    // Función para configurar un reproductor de audio de testimonios
+    function setupTestimonialPlayer(audioId, playButtonId, progressBarId, timeDisplayId) {
+        const audio = document.getElementById(audioId);
+        const playButton = document.getElementById(playButtonId);
+        const playIcon = playButton.querySelector('i');
+        const progressBar = document.getElementById(progressBarId);
+        const timeDisplay = document.getElementById(timeDisplayId);
+        const progressContainer = progressBar.parentElement;
+        
+        // Función para pausar todos los audios (incluyendo el reproductor principal)
+        function pauseAllAudios() {
+            document.querySelectorAll('audio').forEach(a => {
+                if (a !== audio && !a.paused) {
+                    a.pause();
+                    
+                    // Manejar el reproductor principal
+                    if (a.id === 'audioElement') {
+                        const mainPlayBtn = document.getElementById('playPauseBtn');
+                        if (mainPlayBtn) {
+                            const mainIcon = mainPlayBtn.querySelector('i');
+                            mainIcon.classList.remove('fa-pause');
+                            mainIcon.classList.add('fa-play');
+                        }
+                        
+                        // Pausar visualización
+                        const bars = document.querySelectorAll('.bar');
+                        bars.forEach(bar => {
+                            bar.style.animationPlayState = 'paused';
+                        });
+                    } 
+                    // Manejar reproductores de testimonios
+                    else {
+                        const button = document.getElementById(a.id.replace('audio', 'playButton'));
+                        if (button) {
+                            const icon = button.querySelector('i');
+                            icon.classList.remove('fa-pause');
+                            icon.classList.add('fa-play');
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Play/Pause
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                pauseAllAudios(); // Pausar otros audios primero
+                audio.play();
+                playIcon.classList.remove('fa-play');
+                playIcon.classList.add('fa-pause');
+            } else {
+                audio.pause();
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play');
+            }
+        });
+        
+        // Actualizar barra de progreso
+        audio.addEventListener('timeupdate', () => {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = `${progress}%`;
+            
+            // Formatear tiempo (minutos:segundos)
+            const minutes = Math.floor(audio.currentTime / 60);
+            const seconds = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
+            timeDisplay.textContent = `${minutes}:${seconds}`;
+        });
+        
+        // Permitir saltar a una posición
+        progressContainer.addEventListener('click', (e) => {
+            const rect = progressContainer.getBoundingClientRect();
+            const pos = (e.clientX - rect.left) / rect.width;
+            audio.currentTime = pos * audio.duration;
+        });
+        
+        // Cuando el audio termina
+        audio.addEventListener('ended', () => {
+            playIcon.classList.remove('fa-pause');
+            playIcon.classList.add('fa-play');
+            progressBar.style.width = '0';
+            timeDisplay.textContent = '0:00';
+        });
+    }
+    
+    // Asegurarse de que el reproductor principal también pause los reproductores de testimonios
+    const mainAudio = document.getElementById('audioElement');
+    if (mainAudio) {
+        const mainPlayBtn = document.getElementById('playPauseBtn');
+        if (mainPlayBtn) {
+            const originalClickHandler = mainPlayBtn.onclick;
+            
+            mainPlayBtn.onclick = function(e) {
+                if (mainAudio.paused) {
+                    // Pausar todos los reproductores de testimonios
+                    document.querySelectorAll('audio:not(#audioElement)').forEach(a => {
+                        if (!a.paused) {
+                            a.pause();
+                            const button = document.getElementById(a.id.replace('audio', 'playButton'));
+                            if (button) {
+                                const icon = button.querySelector('i');
+                                icon.classList.remove('fa-pause');
+                                icon.classList.add('fa-play');
+                            }
+                        }
+                    });
+                }
+                
+                // Llamar al manejador original si existe
+                if (typeof originalClickHandler === 'function') {
+                    originalClickHandler.call(this, e);
+                }
+            };
+        }
+    }
+    
 });
 </script>
 @endscript
@@ -437,7 +583,7 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <span>Música de Protección Energética</span>
+            <span>Testimonio a</span>
         </div>
         <button class="minimize-btn" id="togglePlayer">
             <i class="fas fa-chevron-down"></i>
@@ -762,7 +908,6 @@
         <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Personas reales que han recuperado el amor gracias a nuestros servicios</p>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Testimonio 1 con audio - 4.8 estrellas -->
             <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up">
                 <div class="flex gap-2 items-center mb-4">
                     <div class="text-yellow-400 text-xl relative">
@@ -773,16 +918,25 @@
                 <p class="text-gray-700 mb-4 italic">"Después de 3 meses separados, mi esposo volvió a casa gracias al amarre. No podía creerlo cuando me pidió perdón y dijo que no podía vivir sin mí. ¡Funcionó en solo 2 semanas!"</p>
                 <p class="font-semibold text-gray-900">- María G. (Madrid)</p>
                 
-                <!-- Reproductor de audio -->
-                <div class="mt-4">
-                    <audio controls class="w-full">
-                        {{-- <source src="@assets/testimonio-maria.mp3" type="audio/mpeg"> --}}
+                <!-- Reproductor de audio personalizado -->
+                <div class="mt-4 testimonial-player" id="player1Container">
+                    <button class="play-pause-btn testimonial-btn" id="playButton1">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="progress-container testimonial-progress">
+                        <div id="progressBar1" class="progress-bar"></div>
+                    </div>
+                    <div class="time-display testimonial-time" id="timeDisplay1">0:00</div>
+                    <!-- Audio element (hidden) -->
+                    <audio id="audio1" preload="metadata">
+                        <source src="{{ Storage::disk('private')->temporaryUrl('audios/mujer1.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
                         Tu navegador no soporta el elemento de audio.
                     </audio>
                 </div>
             </div>
             
-            <!-- Testimonio 2 con audio - 5 estrellas -->
+            
+           <!-- Testimonio 2 con audio personalizado - 5 estrellas -->
             <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="150">
                 <div class="flex gap-2 items-center mb-4">
                     <div class="text-yellow-400 text-xl">
@@ -793,10 +947,18 @@
                 <p class="text-gray-700 mb-4 italic">"Mi novia me había dejado por otro y estaba devastado. Contacté a Joaquín y en menos de un mes ella rompió con el otro y volvió arrepentida. ¡Los resultados son increíbles!"</p>
                 <p class="font-semibold text-gray-900">- Carlos R. (Barcelona)</p>
                 
-                <!-- Reproductor de audio -->
-                <div class="mt-4">
-                    <audio controls class="w-full">
-                        {{-- <source src="@assets/testimonio-carlos.mp3" type="audio/mpeg"> --}}
+                <!-- Reproductor de audio personalizado -->
+                <div class="mt-4 testimonial-player" id="player2Container">
+                    <button class="play-pause-btn testimonial-btn" id="playButton2">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="progress-container testimonial-progress">
+                        <div id="progressBar2" class="progress-bar"></div>
+                    </div>
+                    <div class="time-display testimonial-time" id="timeDisplay2">0:00</div>
+                    <!-- Audio element (hidden) -->
+                    <audio id="audio2" preload="metadata">
+                        <source src="{{ Storage::disk('private')->temporaryUrl('audios/hombre1.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
                         Tu navegador no soporta el elemento de audio.
                     </audio>
                 </div>
