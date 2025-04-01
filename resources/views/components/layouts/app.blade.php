@@ -5,34 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Primary Meta Tags -->
-        <meta name="title" content="Rubicon | Transformación Digital para Medianas y Grandes Empresas">
-        <meta name="description" content="Rubicon ofrece soluciones integrales para optimizar flujos de caja, gestión de inventarios, sistemas QR y automatización de procesos. Mejoramos la experiencia de usuario en sistemas empresariales.">
+        <meta name="title" content="Amarres de Amor | Soluciones Espirituales para Problemas Afectivos">
+        <meta name="description" content="Ofrecemos amarres de amor efectivos, conjuros, rituales y limpiezas espirituales para traer de vuelta a su ser querido y solucionar problemas afectivos con sabiduría y experiencia.">
         <meta name="robots" content="index, follow">
-        {{-- <meta name="keywords" content="automatización empresarial, flujos de caja, gestión de inventarios, sistemas QR, transformación digital, experiencia de usuario empresarial, Rubicon, optimización de procesos"> --}}
-        <meta name="author" content="Rubicon">
-        
+        <meta name="author" content="Amarres de Amor y Endulzamiento">
+
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://rubicon-solutions.com/">
-        <meta property="og:title" content="Rubicon | Soluciones Empresariales para Automatización y Eficiencia">
-        <meta property="og:description" content="Expertos en consolidación de flujos de caja, gestión de inventarios y automatización de procesos para medianas y grandes empresas.">
-        <meta property="og:image" content="https://rubicon-solutions.com/images/og-image.jpg">
-        
+        <meta property="og:url" content="https://amarresdeamoryendulzamiento.com/">
+        <meta property="og:title" content="Amarres de Amor | Soluciones Espirituales para Problemas Afectivos">
+        <meta property="og:description" content="Especialistas en amarres de amor, conjuros efectivos, rituales para mejorar su productividad y limpiezas para purificar energías negativas.">
+        <meta property="og:image" content="https://amarresdeamoryendulzamiento.com/images/og-image.jpg">
+
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://rubicon-solutions.com/">
-        <meta property="twitter:title" content="Rubicon | Transformación Digital para Empresas">
-        <meta property="twitter:description" content="Soluciones tecnológicas para optimizar procesos empresariales, flujos de caja y gestión de inventarios con sistemas QR y automatización.">
-        <meta property="twitter:image" content="https://rubicon-solutions.com/images/og-image.jpg">
-        
+        <meta property="twitter:url" content="https://amarresdeamoryendulzamiento.com/">
+        <meta property="twitter:title" content="Amarres de Amor | Traiga de Vuelta a su Ser Querido">
+        <meta property="twitter:description" content="Soluciones espirituales efectivas: amarres de amor, conjuros, rituales para productividad y limpiezas para purificar energías negativas.">
+        <meta property="twitter:image" content="https://amarresdeamoryendulzamiento.com/images/og-image.jpg">
+
         <!-- Canonical URL -->
-        <link rel="canonical" href="https://rubicon-solutions.com/">
+        <link rel="canonical" href="https://amarresdeamoryendulzamiento.com/">
 
         <meta name="theme-color" content="#000000">
         
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="/favicon.png">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/x-icon" href="{{ Storage::disk('private')->temporaryUrl('img/favicon.ico', now()->addMinutes(30)) }}">
+        <link rel="apple-touch-icon" href="{{ Storage::disk('private')->temporaryUrl('img/favicon.ico', now()->addMinutes(30)) }}">
         
         <!-- Preload critical resources -->
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -59,11 +58,6 @@
                     <div class="px-5 sm:px-0 flex flex-col sm:flex-row sm:space-x-3 space-y-3 sm:space-y-0 justify-center mt-3">
                     </div>
                 </div>
-                {{-- <div class="flex items-center text-gray-400 text-sm justify-center">
-                    <a href="" class="pr-3">Careers</a>
-                    <a href="" class="border-l border-gray-400 px-3">Privacy</a>
-                    <a href="" class="border-l border-gray-400 pl-3">Terms & Conditions</a>
-                </div> --}}
             </div>
         </footer>
         @livewireScripts
