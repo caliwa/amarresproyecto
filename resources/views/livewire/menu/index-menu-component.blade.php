@@ -329,9 +329,9 @@
 @endassets
 @script
 <script>
-    AOS.init();
 
     document.addEventListener('livewire:initialized', () => {
+    AOS.init();
     // Inicializar Plyr si está disponible
     const audioElement = document.getElementById('audioElement');
     const playPauseBtn = document.getElementById('playPauseBtn');

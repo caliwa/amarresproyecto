@@ -8,8 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class IndexMenuComponent extends Component
 {
     public function mount(){
-        $timezone = request()->cookie('timezone', 'UTC');
-        session(['timezone' => $timezone]);
+        // dd(Storage::disk('private'));
     }
 
     public function render()
