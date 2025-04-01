@@ -3,7 +3,6 @@
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
-	<script src="https://cdn.jsdelivr.net/npm/plyr@3.7.2/dist/plyr.polyfilled.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<style>
 		.whatsapp-container {
@@ -331,11 +330,10 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS when everything is ready
-    if (typeof AOS !== 'undefined') {
-        AOS.init();
-    } else {
-        console.warn('AOS library not loaded');
-    }
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
     document.addEventListener('livewire:initialized', () => {
         
         // Obtener elementos del reproductor principal

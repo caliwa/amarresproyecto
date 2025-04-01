@@ -15,14 +15,14 @@
         <meta property="og:url" content="https://amarresdeamoryendulzamiento.com/">
         <meta property="og:title" content="Amarres de Amor | Soluciones Espirituales para Problemas Afectivos">
         <meta property="og:description" content="Especialistas en amarres de amor, conjuros efectivos, rituales para mejorar su productividad y limpiezas para purificar energías negativas.">
-        <meta property="og:image" content="https://amarresdeamoryendulzamiento.com/images/og-image.jpg">
+        {{-- <meta property="og:image" content="https://amarresdeamoryendulzamiento.com/images/og-image.jpg"> --}}
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://amarresdeamoryendulzamiento.com/">
         <meta property="twitter:title" content="Amarres de Amor | Traiga de Vuelta a su Ser Querido">
         <meta property="twitter:description" content="Soluciones espirituales efectivas: amarres de amor, conjuros, rituales para productividad y limpiezas para purificar energías negativas.">
-        <meta property="twitter:image" content="https://amarresdeamoryendulzamiento.com/images/og-image.jpg">
+        {{-- <meta property="twitter:image" content="https://amarresdeamoryendulzamiento.com/images/og-image.jpg"> --}}
 
         <!-- Canonical URL -->
         <link rel="canonical" href="https://amarresdeamoryendulzamiento.com/">
