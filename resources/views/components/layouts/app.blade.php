@@ -47,11 +47,11 @@
             <div class="max-w-lg mx-auto">
                 <div class="flex py-12 justify-center text-white items-center px-20 sm:px-36">
                     <div class="relative">
-                        <h1 class="font-bold text-xl pr-5 relative z-50">A&E</h1>
-					    <img src="{{ Storage::disk('private')->temporaryUrl('img/corazon-logo.png', now()->addMinutes(30)) }}" class="h-11 z-40 absolute -top-2 -left-5">
+                        <h1 class="font-bold text-xl pr-5 relative z-40">A&E</h1>
+					    <img src="{{ Storage::disk('private')->temporaryUrl('img/corazon-logo.png', now()->addMinutes(30)) }}" class="h-11 z-30 absolute -top-2 -left-5">
 
                     </div>
-                    <span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">&copy; 2025 Class Technologies Inc.</span>
+                    <span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">&copy; 2025 Med Technologies Inc.</span>
                 </div>
                 <div class="text-center pb-16 pt-5">
                     <label class="text-gray-300 font-semibold"></label>
