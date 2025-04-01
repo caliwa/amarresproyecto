@@ -569,7 +569,7 @@
 					<div class="flex space-x-5">
 						<div class="w-4/12">
 							<div class="relative">
-								<img class="rounded-xl w-full" src="{{ storage_path('app/img/union-de-parejas.jpg') }}">
+								<img class="rounded-xl w-full" src="{{ Storage::temporaryUrl('img/union-de-parejas.jpg', now()->addMinutes(30)) }}">
 								<!-- <span class="absolute bottom-2 right-2 bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full hidden sm:block">Top 3</span> -->
 							</div>
 						</div>
