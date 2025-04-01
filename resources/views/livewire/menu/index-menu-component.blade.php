@@ -154,6 +154,7 @@
     margin: 0 10px 10px 10px;
     border-radius: 12px;
     overflow: hidden;
+    transition: height 0.3s ease;
 }
 
 .player-header {
@@ -177,16 +178,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.plyr--full-ui input[type=range] {
-    color: #FF4B4B;
-}
-
-.plyr--audio .plyr__control.plyr__tab-focus,
-.plyr--audio .plyr__control:hover,
-.plyr--audio .plyr__control[aria-expanded=true] {
-    background: #FF4B4B;
 }
 
 .song-info {
@@ -259,6 +250,55 @@
 .bar:nth-child(3) { animation-duration: 407ms; }
 .bar:nth-child(4) { animation-duration: 458ms; }
 .bar:nth-child(5) { animation-duration: 400ms; }
+
+/* Custom audio player styling */
+.audio-player-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 60%;
+}
+
+.play-pause-btn, .mute-btn {
+    background: #FF4B4B;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.play-pause-btn:hover, .mute-btn:hover {
+    background: #CC3939;
+}
+
+.progress-container {
+    flex: 1;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #FF4B4B;
+    border-radius: 3px;
+    width: 0;
+}
+
+.time-display {
+    font-size: 12px;
+    color: #666;
+    min-width: 40px;
+    text-align: center;
+}
     </style>
 @endassets
 @script
@@ -267,17 +307,18 @@
 
     document.addEventListener('livewire:initialized', () => {
     // Inicializar Plyr si está disponible
-    if (typeof Plyr !== 'undefined') {
-        const player = new Plyr('#player', {
-            controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
-            settings: ['speed']
-        });
-    }
-
-    // Toggle para minimizar/maximizar el reproductor
+    const audioElement = document.getElementById('audioElement');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const playPauseIcon = playPauseBtn.querySelector('i');
+    const progressBar = document.getElementById('progressBar');
+    const timeDisplay = document.getElementById('timeDisplay');
+    const muteBtn = document.getElementById('muteBtn');
+    const muteIcon = muteBtn.querySelector('i');
     const togglePlayer = document.getElementById('togglePlayer');
     const playerContainer = document.getElementById('playerContainer');
+    const bars = document.querySelectorAll('.bar');
     
+    // Toggle minify player
     if (togglePlayer && playerContainer) {
         togglePlayer.addEventListener('click', function() {
             playerContainer.classList.toggle('minimized');
@@ -292,24 +333,68 @@
             }
         });
     }
-
-    // Animación del visualizador de audio
-    const audio = document.getElementById('player');
-    const bars = document.querySelectorAll('.bar');
     
-    if (audio) {
-        audio.addEventListener('play', function() {
+    // Play/Pause functionality
+    playPauseBtn.addEventListener('click', () => {
+        if (audioElement.paused) {
+            audioElement.play();
+            playPauseIcon.classList.remove('fa-play');
+            playPauseIcon.classList.add('fa-pause');
+            // Start visualization
             bars.forEach(bar => {
                 bar.style.animationPlayState = 'running';
             });
-        });
-        
-        audio.addEventListener('pause', function() {
+        } else {
+            audioElement.pause();
+            playPauseIcon.classList.remove('fa-pause');
+            playPauseIcon.classList.add('fa-play');
+            // Pause visualization
             bars.forEach(bar => {
                 bar.style.animationPlayState = 'paused';
             });
+        }
+    });
+    
+    // Mute functionality
+    muteBtn.addEventListener('click', () => {
+        audioElement.muted = !audioElement.muted;
+        if (audioElement.muted) {
+            muteIcon.classList.remove('fa-volume-up');
+            muteIcon.classList.add('fa-volume-mute');
+        } else {
+            muteIcon.classList.remove('fa-volume-mute');
+            muteIcon.classList.add('fa-volume-up');
+        }
+    });
+    
+    // Update progress bar
+    audioElement.addEventListener('timeupdate', () => {
+        const progress = (audioElement.currentTime / audioElement.duration) * 100;
+        progressBar.style.width = `${progress}%`;
+        
+        // Format time display (minutes:seconds)
+        const minutes = Math.floor(audioElement.currentTime / 60);
+        const seconds = Math.floor(audioElement.currentTime % 60).toString().padStart(2, '0');
+        timeDisplay.textContent = `${minutes}:${seconds}`;
+    });
+    
+    // Allow seeking
+    const progressContainer = document.querySelector('.progress-container');
+    progressContainer.addEventListener('click', (e) => {
+        const rect = progressContainer.getBoundingClientRect();
+        const pos = (e.clientX - rect.left) / rect.width;
+        audioElement.currentTime = pos * audioElement.duration;
+    });
+    
+    // Handle audio ended
+    audioElement.addEventListener('ended', () => {
+        playPauseIcon.classList.remove('fa-pause');
+        playPauseIcon.classList.add('fa-play');
+        // Reset visualization
+        bars.forEach(bar => {
+            bar.style.animationPlayState = 'paused';
         });
-    }
+    });
 });
 </script>
 @endscript
@@ -363,10 +448,23 @@
             <p class="song-title">Frecuencia 432Hz - Armonía Interior</p>
             <p class="song-artist">Sanación & Protección</p>
         </div>
-        <audio id="player" controls>
-            <source src="{{ Storage::disk('private')->temporaryUrl('audios/AUDIO-2025-03-29-18-13-04.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
-            Tu navegador no soporta el elemento de audio.
-        </audio>
+        <div class="audio-player-wrapper">
+            <button id="playPauseBtn" class="play-pause-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <div class="time-display" id="timeDisplay">0:00</div>
+            <button id="muteBtn" class="mute-btn">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <!-- Audio element (hidden) -->
+            <audio id="audioElement" preload="metadata">
+                <source src="{{ Storage::disk('private')->temporaryUrl('audios/AUDIO-2025-03-29-18-13-04.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
     </div>
 </div>
 </div>
