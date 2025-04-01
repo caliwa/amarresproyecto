@@ -583,7 +583,7 @@
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <span>Testimonio a</span>
+            <span>Testimonios reales, trabajo asegurado</span>
         </div>
         <button class="minimize-btn" id="togglePlayer">
             <i class="fas fa-chevron-down"></i>
@@ -591,7 +591,7 @@
     </div>
     <div class="player-controls">
         <div class="song-info">
-            <p class="song-title">Frecuencia 432Hz - Armonía Interior</p>
+            <p class="song-title">Alicia Fuentes - Joaquín Pascal</p>
             <p class="song-artist">Sanación & Protección</p>
         </div>
         <div class="audio-player-wrapper">
