@@ -549,7 +549,7 @@ document.addEventListener('livewire:initialized', () => {
                 <div class="bar"></div>
                 <div class="bar"></div>
             </div>
-            <span class="mt-2">Testimonios reales, trabajo asegurado</span>
+            <span class="mt-1">Testimonios reales, trabajo asegurado</span>
         </div>
         <button class="minimize-btn" id="togglePlayer">
             <i class="fas fa-chevron-down"></i>
