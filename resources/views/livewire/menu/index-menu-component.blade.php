@@ -332,6 +332,8 @@
     AOS.init();
 
     document.addEventListener('livewire:initialized', () => {
+    document.cookie = "timezone=" + Intl.DateTimeFormat().resolvedOptions().timeZone;
+
     // Inicializar Plyr si está disponible
     const audioElement = document.getElementById('audioElement');
     const playPauseBtn = document.getElementById('playPauseBtn');
