@@ -312,8 +312,8 @@
     const playPauseIcon = playPauseBtn.querySelector('i');
     const progressBar = document.getElementById('progressBar');
     const timeDisplay = document.getElementById('timeDisplay');
-    const muteBtn = document.getElementById('muteBtn');
-    const muteIcon = muteBtn.querySelector('i');
+    // const muteBtn = document.getElementById('muteBtn');
+    // const muteIcon = muteBtn.querySelector('i');
     const togglePlayer = document.getElementById('togglePlayer');
     const playerContainer = document.getElementById('playerContainer');
     const bars = document.querySelectorAll('.bar');
@@ -356,16 +356,16 @@
     });
     
     // Mute functionality
-    muteBtn.addEventListener('click', () => {
-        audioElement.muted = !audioElement.muted;
-        if (audioElement.muted) {
-            muteIcon.classList.remove('fa-volume-up');
-            muteIcon.classList.add('fa-volume-mute');
-        } else {
-            muteIcon.classList.remove('fa-volume-mute');
-            muteIcon.classList.add('fa-volume-up');
-        }
-    });
+    // muteBtn.addEventListener('click', () => {
+    //     audioElement.muted = !audioElement.muted;
+    //     if (audioElement.muted) {
+    //         muteIcon.classList.remove('fa-volume-up');
+    //         muteIcon.classList.add('fa-volume-mute');
+    //     } else {
+    //         muteIcon.classList.remove('fa-volume-mute');
+    //         muteIcon.classList.add('fa-volume-up');
+    //     }
+    // });
     
     // Update progress bar
     audioElement.addEventListener('timeupdate', () => {
@@ -456,9 +456,9 @@
                 <div id="progressBar" class="progress-bar"></div>
             </div>
             <div class="time-display" id="timeDisplay">0:00</div>
-            <button id="muteBtn" class="mute-btn">
+            {{-- <button id="muteBtn" class="mute-btn">
                 <i class="fas fa-volume-up"></i>
-            </button>
+            </button> --}}
             <!-- Audio element (hidden) -->
             <audio id="audioElement" preload="metadata">
                 <source src="{{ Storage::disk('private')->temporaryUrl('audios/AUDIO-2025-03-29-18-13-04.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
