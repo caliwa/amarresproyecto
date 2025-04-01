@@ -373,10 +373,10 @@
 				
 			<!--Right Col-->
 			<div class="w-full lg:w-6/12 lg:-mt-10 relative" id="girl">
-				<img data-aos="fade-up" data-aos-once="true" class="w-10/12 mx-auto 2xl:-mb-20" src="img/wizard.png" />
+				<img data-aos="fade-up" data-aos-once="true" class="w-10/12 mx-auto 2xl:-mb-20" src="{{ Storage::disk('private')->temporaryUrl('img/wizard.png', now()->addMinutes(30)) }}">
 				<!-- calendar -->
 				<div data-aos="fade-up" data-aos-delay="300" data-aos-once="true" class="absolute top-20 -left-6 sm:top-32 sm:left-10 md:top-40 md:left-16 lg:-left-0 lg:top-52 floating-4">
-					<img class="bg-white bg-opacity-80 rounded-lg h-12 sm:h-16" src="img/calendar.svg">
+					<img class="bg-white bg-opacity-80 rounded-lg h-12 sm:h-16" src="{{ Storage::disk('private')->temporaryUrl('img/calendar.svg', now()->addMinutes(30)) }}">
 				</div>
 				<!-- red -->
 				<div data-aos="fade-up" data-aos-delay="400" data-aos-once="true" class="absolute top-20 right-10 sm:right-24 sm:top-28 md:top-36 md:right-32 lg:top-32 lg:right-16 floating">
@@ -419,11 +419,11 @@
 				</div>
 				<!-- ux class -->
 				<div data-aos="fade-up" data-aos-delay="500" data-aos-once="true" class="absolute bottom-14 -left-4 sm:left-2 sm:bottom-20 lg:bottom-24 lg:-left-4 floating">
-					<img class="bg-white bg-opacity-80 rounded-lg h-20 sm:h-28" src="img/ux-class.svg" alt="">
+					<img class="bg-white bg-opacity-80 rounded-lg h-20 sm:h-28" src="{{ Storage::disk('private')->temporaryUrl('img/ux-class.svg', now()->addMinutes(30)) }}" alt="">
 				</div>
 				<!-- congrats -->
 				<div data-aos="fade-up" data-aos-delay="600" data-aos-once="true" class="absolute bottom-20 md:bottom-48 lg:bottom-52 -right-6 lg:right-8 floating-4">
-					<img class="bg-white bg-opacity-80 rounded-lg h-12 sm:h-16" src="img/congrat.svg" alt="">
+					<img class="bg-white bg-opacity-80 rounded-lg h-12 sm:h-16" src="{{ Storage::disk('private')->temporaryUrl('img/congrat.svg', now()->addMinutes(30)) }}" alt="">
 				</div>
 			</div>
 		</div>
@@ -538,7 +538,7 @@
 			</div>
 			<div data-aos="zoom-in-up" class="my-14 flex flex-col lg:flex-row lg:space-x-20">
 				<div class="lg:w-6/12">
-					<img class="w-full mb-6 rounded-md" src="img/rituales.jpg">
+					<img class="w-full mb-6 rounded-md" src="{{ Storage::disk('private')->temporaryUrl('img/rituales.jpg', now()->addMinutes(30)) }}">
 				
 					<span class="animate-pulse bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full">Más vendido!</span>
 					<h1 class="text-gray-800 font-semibold my-3 text-xl">AMARRES Y RETORNOS DE AMOR</h1>
@@ -557,7 +557,7 @@
 					<div class="flex space-x-5">
 						<div class="w-4/12">
 							<div class="relative">
-								<img class="rounded-xl w-full" src="img/conjuros.jpg">
+								<img class="rounded-xl w-full" src="{{ Storage::disk('private')->temporaryUrl('img/conjuros.jpg', now()->addMinutes(30)) }}">
 								<!-- <span class="absolute bottom-2 right-2 bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full hidden sm:block">TOP 2 </span> -->
 							</div>
 						</div>
@@ -569,7 +569,7 @@
 					<div class="flex space-x-5">
 						<div class="w-4/12">
 							<div class="relative">
-								<img class="rounded-xl w-full" src="img/union-de-parejas.jpg">
+								<img class="rounded-xl w-full" src="{{ Storage::disk('private')->temporaryUrl('img/union-de-parejas.jpg', now()->addMinutes(30)) }}">
 								<!-- <span class="absolute bottom-2 right-2 bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full hidden sm:block">Top 3</span> -->
 							</div>
 						</div>
@@ -581,7 +581,7 @@
 					<div class="flex space-x-5">
 						<div class="w-4/12">
 							<div class="relative">
-								<img class="rounded-xl w-full" src="img/Limpiezas.png">
+								<img class="rounded-xl w-full" src="{{ Storage::disk('private')->temporaryUrl('img/Limpiezas.png', now()->addMinutes(30)) }}">
 								<!-- <span class="absolute bottom-2 right-2 bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full hidden sm:block">Top 4</span> -->
 							</div>
 						</div>
@@ -595,7 +595,7 @@
 					<div class="flex space-x-5">
 						<div class="w-4/12">
 							<div class="relative">
-								<img class="rounded-xl w-full" src="img/rituales-de-atraccion.png">
+								<img class="rounded-xl w-full" src="{{ Storage::disk('private')->temporaryUrl('img/rituales-de-atraccion.png', now()->addMinutes(30)) }}">
 								<!-- <span class="absolute bottom-2 right-2 bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full hidden sm:block">Top 5</span> -->
 							</div>
 						</div>
