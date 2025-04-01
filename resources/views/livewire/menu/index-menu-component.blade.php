@@ -142,122 +142,123 @@
         
         /* Player styles */
         .player-container {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            border-top: 1px solid rgba(0,0,0,0.1);
-            z-index: 900;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
-            margin: 0 10px 10px 10px;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .player-header {
-            background: linear-gradient(135deg, #FF4B4B 0%, #A70000 100%);
-            color: white;
-            padding: 12px 20px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .player-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .player-controls {
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .plyr--full-ui input[type=range] {
-            color: #FF4B4B;
-        }
-        
-        .plyr--audio .plyr__control.plyr__tab-focus,
-        .plyr--audio .plyr__control:hover,
-        .plyr--audio .plyr__control[aria-expanded=true] {
-            background: #FF4B4B;
-        }
-        
-        .song-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .song-title {
-            font-weight: 600;
-            margin: 0;
-        }
-        
-        .song-artist {
-            font-size: 12px;
-            color: #666;
-            margin: 0;
-        }
-        
-        .minimize-btn {
-            background: transparent;
-            border: none;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        .minimize-btn:hover {
-            transform: scale(1.1);
-        }
-        
-        .minimized {
-            height: 60px;
-            overflow: hidden;
-        }
-        
-        .minimized .player-controls {
-            display: none;
-        }
-        
-        .visualizer {
-            display: flex;
-            align-items: flex-end;
-            height: 30px;
-            gap: 3px;
-            width: 40px;
-        }
-        
-        .bar {
-            background: white;
-            width: 4px;
-            height: 5px;
-            border-radius: 1px;
-            animation: sound 0ms -800ms linear infinite alternate;
-        }
-        
-        @keyframes sound {
-            0% {
-                height: 5px;
-            }
-            100% {
-                height: 25px;
-            }
-        }
-        
-        .bar:nth-child(1) { animation-duration: 474ms; }
-        .bar:nth-child(2) { animation-duration: 433ms; }
-        .bar:nth-child(3) { animation-duration: 407ms; }
-        .bar:nth-child(4) { animation-duration: 458ms; }
-        .bar:nth-child(5) { animation-duration: 400ms; }
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    z-index: 900;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    margin: 0 10px 10px 10px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.player-header {
+    background: linear-gradient(135deg, #FF4B4B 0%, #A70000 100%);
+    color: white;
+    padding: 12px 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.player-controls {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.plyr--full-ui input[type=range] {
+    color: #FF4B4B;
+}
+
+.plyr--audio .plyr__control.plyr__tab-focus,
+.plyr--audio .plyr__control:hover,
+.plyr--audio .plyr__control[aria-expanded=true] {
+    background: #FF4B4B;
+}
+
+.song-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song-title {
+    font-weight: 600;
+    margin: 0;
+}
+
+.song-artist {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.minimize-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.minimize-btn:hover {
+    transform: scale(1.1);
+}
+
+.minimized {
+    height: 60px;
+    overflow: hidden;
+}
+
+.minimized .player-controls {
+    display: none;
+}
+
+.visualizer {
+    display: flex;
+    align-items: flex-end;
+    height: 30px;
+    gap: 3px;
+    width: 40px;
+}
+
+.bar {
+    background: white;
+    width: 4px;
+    height: 5px;
+    border-radius: 1px;
+    animation: sound 0ms -800ms linear infinite alternate;
+    animation-play-state: paused;
+}
+
+@keyframes sound {
+    0% {
+        height: 5px;
+    }
+    100% {
+        height: 25px;
+    }
+}
+
+.bar:nth-child(1) { animation-duration: 474ms; }
+.bar:nth-child(2) { animation-duration: 433ms; }
+.bar:nth-child(3) { animation-duration: 407ms; }
+.bar:nth-child(4) { animation-duration: 458ms; }
+.bar:nth-child(5) { animation-duration: 400ms; }
     </style>
 @endassets
 @script
@@ -265,50 +266,51 @@
     AOS.init();
 
     document.addEventListener('livewire:initialized', () => {
-        // Inicializar Plyr si está disponible
-        if (typeof Plyr !== 'undefined') {
-            const player = new Plyr('#player', {
-                controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
-                settings: ['speed']
-            });
-        }
-        
-        // Toggle para minimizar/maximizar el reproductor
-        const togglePlayer = document.getElementById('togglePlayer');
-        const playerContainer = document.getElementById('playerContainer');
-        
-        if (togglePlayer && playerContainer) {
-            togglePlayer.addEventListener('click', function() {
-                playerContainer.classList.toggle('minimized');
-                const icon = this.querySelector('i');
-                if (playerContainer.classList.contains('minimized')) {
-                    icon.classList.remove('fa-chevron-down');
-                    icon.classList.add('fa-chevron-up');
-                } else {
-                    icon.classList.remove('fa-chevron-up');
-                    icon.classList.add('fa-chevron-down');
-                }
-            });
-        }
-        
-        // Animación del visualizador de audio
-        const audio = document.getElementById('player');
-        const bars = document.querySelectorAll('.bar');
-        
-        if (audio) {
-            audio.addEventListener('play', function() {
-                bars.forEach(bar => {
-                    bar.style.animationPlayState = 'running';
-                });
-            });
+    // Inicializar Plyr si está disponible
+    if (typeof Plyr !== 'undefined') {
+        const player = new Plyr('#player', {
+            controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
+            settings: ['speed']
+        });
+    }
+
+    // Toggle para minimizar/maximizar el reproductor
+    const togglePlayer = document.getElementById('togglePlayer');
+    const playerContainer = document.getElementById('playerContainer');
+    
+    if (togglePlayer && playerContainer) {
+        togglePlayer.addEventListener('click', function() {
+            playerContainer.classList.toggle('minimized');
+            const icon = this.querySelector('i');
             
-            audio.addEventListener('pause', function() {
-                bars.forEach(bar => {
-                    bar.style.animationPlayState = 'paused';
-                });
+            if (playerContainer.classList.contains('minimized')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+    }
+
+    // Animación del visualizador de audio
+    const audio = document.getElementById('player');
+    const bars = document.querySelectorAll('.bar');
+    
+    if (audio) {
+        audio.addEventListener('play', function() {
+            bars.forEach(bar => {
+                bar.style.animationPlayState = 'running';
             });
-        }
-    });
+        });
+        
+        audio.addEventListener('pause', function() {
+            bars.forEach(bar => {
+                bar.style.animationPlayState = 'paused';
+            });
+        });
+    }
+});
 </script>
 @endscript
 <div>
