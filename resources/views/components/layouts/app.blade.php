@@ -49,7 +49,7 @@
                 <div class="flex py-12 justify-center text-white items-center px-20 sm:px-36">
                     <div class="relative">
                         <h1 class="font-bold text-xl pr-5 relative z-50">A&E</h1>
-                        <img src="img/corazon-logo.png" class="h-11 z-40 absolute -top-2 -left-5">
+					    <img src="{{ Storage::disk('private')->temporaryUrl('img/corazon-logo.png', now()->addMinutes(30)) }}" class="h-11 z-40 absolute -top-2 -left-5">
 
                     </div>
                     <span class="border-l border-gray-500 text-sm pl-5 py-2 font-semibold">&copy; 2025 Class Technologies Inc.</span>
