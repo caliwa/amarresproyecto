@@ -142,219 +142,173 @@
         
         /* Player styles */
         .player-container {
-    position: fixed;
-    bottom: 0;
-    right: 20px;
-    width: 300px;
-    background: #1e1e1e;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-    color: white;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    z-index: 9999;
-}
-
-.player-container.minimized {
-    height: 50px;
-}
-
-.player-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-    background: #121212;
-    cursor: pointer;
-}
-
-.player-title {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-}
-
-.visualizer {
-    display: flex;
-    align-items: flex-end;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.visualizer .bar {
-    width: 3px;
-    height: 5px;
-    background: #1DB954;
-    margin: 0 1px;
-    border-radius: 1px;
-    transition: height 0.2s ease;
-}
-
-.visualizer .bar.animate {
-    animation: visualize 0.5s infinite alternate;
-}
-
-@keyframes visualize {
-    0% { height: 5px; }
-    100% { height: 20px; }
-}
-
-.minimize-btn {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.player-controls {
-    padding: 15px;
-}
-
-.song-info {
-    margin-bottom: 15px;
-}
-
-.song-title {
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.song-artist {
-    font-size: 12px;
-    color: #aaa;
-    margin: 5px 0 0;
-}
-
-.controls {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.play-btn {
-    background: #1DB954;
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-.progress-container {
-    flex: 1;
-    height: 5px;
-    background: #535353;
-    border-radius: 3px;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.progress-bar {
-    height: 100%;
-    background: #1DB954;
-    border-radius: 3px;
-    width: 0;
-}
-
-.time {
-    font-size: 12px;
-    color: #aaa;
-}
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid rgba(0,0,0,0.1);
+            z-index: 900;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+            margin: 0 10px 10px 10px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .player-header {
+            background: linear-gradient(135deg, #FF4B4B 0%, #A70000 100%);
+            color: white;
+            padding: 12px 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .player-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .player-controls {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .plyr--full-ui input[type=range] {
+            color: #FF4B4B;
+        }
+        
+        .plyr--audio .plyr__control.plyr__tab-focus,
+        .plyr--audio .plyr__control:hover,
+        .plyr--audio .plyr__control[aria-expanded=true] {
+            background: #FF4B4B;
+        }
+        
+        .song-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .song-title {
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .song-artist {
+            font-size: 12px;
+            color: #666;
+            margin: 0;
+        }
+        
+        .minimize-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .minimize-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .minimized {
+            height: 60px;
+            overflow: hidden;
+        }
+        
+        .minimized .player-controls {
+            display: none;
+        }
+        
+        .visualizer {
+            display: flex;
+            align-items: flex-end;
+            height: 30px;
+            gap: 3px;
+            width: 40px;
+        }
+        
+        .bar {
+            background: white;
+            width: 4px;
+            height: 5px;
+            border-radius: 1px;
+            animation: sound 0ms -800ms linear infinite alternate;
+        }
+        
+        @keyframes sound {
+            0% {
+                height: 5px;
+            }
+            100% {
+                height: 25px;
+            }
+        }
+        
+        .bar:nth-child(1) { animation-duration: 474ms; }
+        .bar:nth-child(2) { animation-duration: 433ms; }
+        .bar:nth-child(3) { animation-duration: 407ms; }
+        .bar:nth-child(4) { animation-duration: 458ms; }
+        .bar:nth-child(5) { animation-duration: 400ms; }
     </style>
 @endassets
 @script
 <script>
     AOS.init();
 
-    document.addEventListener('DOMContentLoaded', function() {
-    const player = document.getElementById('player');
-    const playBtn = document.getElementById('playBtn');
-    const progressBar = document.getElementById('progressBar');
-    const currentTime = document.getElementById('currentTime');
-    const duration = document.getElementById('duration');
-    const togglePlayer = document.getElementById('togglePlayer');
-    const playerContainer = document.getElementById('playerContainer');
-    
-    // Toggle player minimize/maximize
-    togglePlayer.addEventListener('click', function() {
-        playerContainer.classList.toggle('minimized');
-        togglePlayer.querySelector('i').classList.toggle('fa-chevron-down');
-        togglePlayer.querySelector('i').classList.toggle('fa-chevron-up');
-    });
-    
-    // Play/Pause functionality
-    playBtn.addEventListener('click', function() {
-        if (player.paused) {
-            player.play();
-            playBtn.querySelector('i').classList.remove('fa-play');
-            playBtn.querySelector('i').classList.add('fa-pause');
-        } else {
-            player.pause();
-            playBtn.querySelector('i').classList.remove('fa-pause');
-            playBtn.querySelector('i').classList.add('fa-play');
+    document.addEventListener('livewire:initialized', () => {
+        // Inicializar Plyr si está disponible
+        if (typeof Plyr !== 'undefined') {
+            const player = new Plyr('#player', {
+                controls: ['play', 'progress', 'current-time', 'mute', 'volume', 'settings', 'fullscreen'],
+                settings: ['speed']
+            });
+        }
+        
+        // Toggle para minimizar/maximizar el reproductor
+        const togglePlayer = document.getElementById('togglePlayer');
+        const playerContainer = document.getElementById('playerContainer');
+        
+        if (togglePlayer && playerContainer) {
+            togglePlayer.addEventListener('click', function() {
+                playerContainer.classList.toggle('minimized');
+                const icon = this.querySelector('i');
+                if (playerContainer.classList.contains('minimized')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        }
+        
+        // Animación del visualizador de audio
+        const audio = document.getElementById('player');
+        const bars = document.querySelectorAll('.bar');
+        
+        if (audio) {
+            audio.addEventListener('play', function() {
+                bars.forEach(bar => {
+                    bar.style.animationPlayState = 'running';
+                });
+            });
+            
+            audio.addEventListener('pause', function() {
+                bars.forEach(bar => {
+                    bar.style.animationPlayState = 'paused';
+                });
+            });
         }
     });
-    
-    // Update progress bar
-    player.addEventListener('timeupdate', function() {
-        const progress = (player.currentTime / player.duration) * 100;
-        progressBar.style.width = progress + '%';
-        
-        // Update current time
-        const mins = Math.floor(player.currentTime / 60);
-        const secs = Math.floor(player.currentTime % 60);
-        currentTime.textContent = mins + ':' + (secs < 10 ? '0' + secs : secs);
-    });
-    
-    // Set duration when metadata is loaded
-    player.addEventListener('loadedmetadata', function() {
-        const mins = Math.floor(player.duration / 60);
-        const secs = Math.floor(player.duration % 60);
-        duration.textContent = mins + ':' + (secs < 10 ? '0' + secs : secs);
-    });
-    
-    // Click on progress bar to seek
-    document.querySelector('.progress-container').addEventListener('click', function(e) {
-        const percent = e.offsetX / this.offsetWidth;
-        player.currentTime = percent * player.duration;
-    });
-    
-    // Animate visualizer bars when playing
-    player.addEventListener('play', startVisualizer);
-    player.addEventListener('pause', stopVisualizer);
-    
-    function startVisualizer() {
-        const bars = document.querySelectorAll('.visualizer .bar');
-        bars.forEach(bar => {
-            const height = Math.floor(Math.random() * 20) + 5;
-            bar.style.height = height + 'px';
-            bar.classList.add('animate');
-        });
-        
-        visualizerInterval = setInterval(() => {
-            bars.forEach(bar => {
-                const height = Math.floor(Math.random() * 20) + 5;
-                bar.style.height = height + 'px';
-            });
-        }, 300);
-    }
-    
-    function stopVisualizer() {
-        clearInterval(visualizerInterval);
-        const bars = document.querySelectorAll('.visualizer .bar');
-        bars.forEach(bar => {
-            bar.classList.remove('animate');
-            bar.style.height = '5px';
-        });
-    }
-});
-
 </script>
 @endscript
 <div>
@@ -407,20 +361,10 @@
             <p class="song-title">Frecuencia 432Hz - Armonía Interior</p>
             <p class="song-artist">Sanación & Protección</p>
         </div>
-        <audio id="player" class="player-js">
+        <audio id="player" controls>
             <source src="{{ Storage::disk('private')->temporaryUrl('audios/AUDIO-2025-03-29-18-13-04.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
+            Tu navegador no soporta el elemento de audio.
         </audio>
-        <div class="controls">
-            <button id="playBtn" class="play-btn">
-                <i class="fas fa-play"></i>
-            </button>
-            <div class="progress-container">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-            <div class="time">
-                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
-            </div>
-        </div>
     </div>
 </div>
 </div>
