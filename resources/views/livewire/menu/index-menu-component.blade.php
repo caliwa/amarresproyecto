@@ -329,183 +329,190 @@
 @endassets
 @script
 <script>
-document.addEventListener('livewire:initialized', () => {
-    AOS.init();
-    
-    // Obtener elementos del reproductor principal
-    const audioElement = document.getElementById('audioElement');
-    const playPauseBtn = document.getElementById('playPauseBtn');
-    const playPauseIcon = playPauseBtn.querySelector('i');
-    const progressBar = document.getElementById('progressBar');
-    const timeDisplay = document.getElementById('timeDisplay');
-    const togglePlayer = document.getElementById('togglePlayer');
-    const playerContainer = document.getElementById('playerContainer');
-    const bars = document.querySelectorAll('.bar');
-    
-    // Función para configurar un reproductor de audio de testimonios
-    function setupTestimonialPlayer(audioId, playButtonId, progressBarId, timeDisplayId) {
-        const audio = document.getElementById(audioId);
-        const playButton = document.getElementById(playButtonId);
-        const playIcon = playButton.querySelector('i');
-        const progressBar = document.getElementById(progressBarId);
-        const timeDisplay = document.getElementById(timeDisplayId);
-        const progressContainer = progressBar.parentElement;
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS when everything is ready
+    if (typeof AOS !== 'undefined') {
+        AOS.init();
+    } else {
+        console.warn('AOS library not loaded');
+    }
+    document.addEventListener('livewire:initialized', () => {
         
-        // Función para pausar todos los audios (incluyendo el reproductor principal)
-        function pauseAllAudios() {
-            document.querySelectorAll('audio').forEach(a => {
-                if (a !== audio && !a.paused) {
-                    a.pause();
-                    
-                    // Manejar el reproductor principal
-                    if (a.id === 'audioElement') {
-                        const mainPlayBtn = document.getElementById('playPauseBtn');
-                        if (mainPlayBtn) {
-                            const mainIcon = mainPlayBtn.querySelector('i');
-                            mainIcon.classList.remove('fa-pause');
-                            mainIcon.classList.add('fa-play');
-                        }
+        // Obtener elementos del reproductor principal
+        const audioElement = document.getElementById('audioElement');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const playPauseIcon = playPauseBtn.querySelector('i');
+        const progressBar = document.getElementById('progressBar');
+        const timeDisplay = document.getElementById('timeDisplay');
+        const togglePlayer = document.getElementById('togglePlayer');
+        const playerContainer = document.getElementById('playerContainer');
+        const bars = document.querySelectorAll('.bar');
+        
+        // Función para configurar un reproductor de audio de testimonios
+        function setupTestimonialPlayer(audioId, playButtonId, progressBarId, timeDisplayId) {
+            const audio = document.getElementById(audioId);
+            const playButton = document.getElementById(playButtonId);
+            const playIcon = playButton.querySelector('i');
+            const progressBar = document.getElementById(progressBarId);
+            const timeDisplay = document.getElementById(timeDisplayId);
+            const progressContainer = progressBar.parentElement;
+            
+            // Función para pausar todos los audios (incluyendo el reproductor principal)
+            function pauseAllAudios() {
+                document.querySelectorAll('audio').forEach(a => {
+                    if (a !== audio && !a.paused) {
+                        a.pause();
                         
-                        // Pausar visualización
-                        const bars = document.querySelectorAll('.bar');
-                        bars.forEach(bar => {
-                            bar.style.animationPlayState = 'paused';
-                        });
-                    } 
-                    // Manejar reproductores de testimonios
-                    else {
-                        const button = document.getElementById(a.id.replace('audio', 'playButton'));
-                        if (button) {
-                            const icon = button.querySelector('i');
-                            icon.classList.remove('fa-pause');
-                            icon.classList.add('fa-play');
+                        // Manejar el reproductor principal
+                        if (a.id === 'audioElement') {
+                            const mainPlayBtn = document.getElementById('playPauseBtn');
+                            if (mainPlayBtn) {
+                                const mainIcon = mainPlayBtn.querySelector('i');
+                                mainIcon.classList.remove('fa-pause');
+                                mainIcon.classList.add('fa-play');
+                            }
+                            
+                            // Pausar visualización
+                            const bars = document.querySelectorAll('.bar');
+                            bars.forEach(bar => {
+                                bar.style.animationPlayState = 'paused';
+                            });
+                        } 
+                        // Manejar reproductores de testimonios
+                        else {
+                            const button = document.getElementById(a.id.replace('audio', 'playButton'));
+                            if (button) {
+                                const icon = button.querySelector('i');
+                                icon.classList.remove('fa-pause');
+                                icon.classList.add('fa-play');
+                            }
                         }
+                    }
+                });
+            }
+            
+            // Play/Pause
+            playButton.addEventListener('click', () => {
+                if (audio.paused) {
+                    pauseAllAudios(); // Pausar otros audios primero
+                    audio.play();
+                    playIcon.classList.remove('fa-play');
+                    playIcon.classList.add('fa-pause');
+                } else {
+                    audio.pause();
+                    playIcon.classList.remove('fa-pause');
+                    playIcon.classList.add('fa-play');
+                }
+            });
+            
+            // Actualizar barra de progreso
+            audio.addEventListener('timeupdate', () => {
+                const progress = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = `${progress}%`;
+                
+                // Formatear tiempo (minutos:segundos)
+                const minutes = Math.floor(audio.currentTime / 60);
+                const seconds = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
+                timeDisplay.textContent = `${minutes}:${seconds}`;
+            });
+            
+            // Permitir saltar a una posición
+            progressContainer.addEventListener('click', (e) => {
+                const rect = progressContainer.getBoundingClientRect();
+                const pos = (e.clientX - rect.left) / rect.width;
+                audio.currentTime = pos * audio.duration;
+            });
+            
+            // Cuando el audio termina
+            audio.addEventListener('ended', () => {
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play');
+                progressBar.style.width = '0';
+                timeDisplay.textContent = '0:00';
+            });
+        }
+        
+        // Configurar reproductores de testimonios
+        setupTestimonialPlayer('audio1', 'playButton1', 'progressBar1', 'timeDisplay1');
+        setupTestimonialPlayer('audio2', 'playButton2', 'progressBar2', 'timeDisplay2');
+        
+        // Toggle minify player
+        if (togglePlayer && playerContainer) {
+            togglePlayer.addEventListener('click', function() {
+                playerContainer.classList.toggle('minimized');
+                const icon = this.querySelector('i');
+                
+                if (playerContainer.classList.contains('minimized')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        }
+        
+        // Play/Pause functionality para reproductor principal
+        playPauseBtn.addEventListener('click', () => {
+            // Pausar todos los reproductores de testimonios
+            document.querySelectorAll('audio:not(#audioElement)').forEach(a => {
+                if (!a.paused) {
+                    a.pause();
+                    const button = document.getElementById(a.id.replace('audio', 'playButton'));
+                    if (button) {
+                        const icon = button.querySelector('i');
+                        icon.classList.remove('fa-pause');
+                        icon.classList.add('fa-play');
                     }
                 }
             });
-        }
-        
-        // Play/Pause
-        playButton.addEventListener('click', () => {
-            if (audio.paused) {
-                pauseAllAudios(); // Pausar otros audios primero
-                audio.play();
-                playIcon.classList.remove('fa-play');
-                playIcon.classList.add('fa-pause');
+            
+            if (audioElement.paused) {
+                audioElement.play();
+                playPauseIcon.classList.remove('fa-play');
+                playPauseIcon.classList.add('fa-pause');
+                // Start visualization
+                bars.forEach(bar => {
+                    bar.style.animationPlayState = 'running';
+                });
             } else {
-                audio.pause();
-                playIcon.classList.remove('fa-pause');
-                playIcon.classList.add('fa-play');
+                audioElement.pause();
+                playPauseIcon.classList.remove('fa-pause');
+                playPauseIcon.classList.add('fa-play');
+                // Pause visualization
+                bars.forEach(bar => {
+                    bar.style.animationPlayState = 'paused';
+                });
             }
         });
         
-        // Actualizar barra de progreso
-        audio.addEventListener('timeupdate', () => {
-            const progress = (audio.currentTime / audio.duration) * 100;
+        // Update progress bar para reproductor principal
+        audioElement.addEventListener('timeupdate', () => {
+            const progress = (audioElement.currentTime / audioElement.duration) * 100;
             progressBar.style.width = `${progress}%`;
             
-            // Formatear tiempo (minutos:segundos)
-            const minutes = Math.floor(audio.currentTime / 60);
-            const seconds = Math.floor(audio.currentTime % 60).toString().padStart(2, '0');
+            // Format time display (minutes:seconds)
+            const minutes = Math.floor(audioElement.currentTime / 60);
+            const seconds = Math.floor(audioElement.currentTime % 60).toString().padStart(2, '0');
             timeDisplay.textContent = `${minutes}:${seconds}`;
         });
         
-        // Permitir saltar a una posición
+        // Allow seeking para reproductor principal
+        const progressContainer = document.querySelector('.progress-container');
         progressContainer.addEventListener('click', (e) => {
             const rect = progressContainer.getBoundingClientRect();
             const pos = (e.clientX - rect.left) / rect.width;
-            audio.currentTime = pos * audio.duration;
+            audioElement.currentTime = pos * audioElement.duration;
         });
         
-        // Cuando el audio termina
-        audio.addEventListener('ended', () => {
-            playIcon.classList.remove('fa-pause');
-            playIcon.classList.add('fa-play');
-            progressBar.style.width = '0';
-            timeDisplay.textContent = '0:00';
-        });
-    }
-    
-    // Configurar reproductores de testimonios
-    setupTestimonialPlayer('audio1', 'playButton1', 'progressBar1', 'timeDisplay1');
-    setupTestimonialPlayer('audio2', 'playButton2', 'progressBar2', 'timeDisplay2');
-    
-    // Toggle minify player
-    if (togglePlayer && playerContainer) {
-        togglePlayer.addEventListener('click', function() {
-            playerContainer.classList.toggle('minimized');
-            const icon = this.querySelector('i');
-            
-            if (playerContainer.classList.contains('minimized')) {
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
-            } else {
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
-            }
-        });
-    }
-    
-    // Play/Pause functionality para reproductor principal
-    playPauseBtn.addEventListener('click', () => {
-        // Pausar todos los reproductores de testimonios
-        document.querySelectorAll('audio:not(#audioElement)').forEach(a => {
-            if (!a.paused) {
-                a.pause();
-                const button = document.getElementById(a.id.replace('audio', 'playButton'));
-                if (button) {
-                    const icon = button.querySelector('i');
-                    icon.classList.remove('fa-pause');
-                    icon.classList.add('fa-play');
-                }
-            }
-        });
-        
-        if (audioElement.paused) {
-            audioElement.play();
-            playPauseIcon.classList.remove('fa-play');
-            playPauseIcon.classList.add('fa-pause');
-            // Start visualization
-            bars.forEach(bar => {
-                bar.style.animationPlayState = 'running';
-            });
-        } else {
-            audioElement.pause();
+        // Handle audio ended para reproductor principal
+        audioElement.addEventListener('ended', () => {
             playPauseIcon.classList.remove('fa-pause');
             playPauseIcon.classList.add('fa-play');
-            // Pause visualization
+            // Reset visualization
             bars.forEach(bar => {
                 bar.style.animationPlayState = 'paused';
             });
-        }
-    });
-    
-    // Update progress bar para reproductor principal
-    audioElement.addEventListener('timeupdate', () => {
-        const progress = (audioElement.currentTime / audioElement.duration) * 100;
-        progressBar.style.width = `${progress}%`;
-        
-        // Format time display (minutes:seconds)
-        const minutes = Math.floor(audioElement.currentTime / 60);
-        const seconds = Math.floor(audioElement.currentTime % 60).toString().padStart(2, '0');
-        timeDisplay.textContent = `${minutes}:${seconds}`;
-    });
-    
-    // Allow seeking para reproductor principal
-    const progressContainer = document.querySelector('.progress-container');
-    progressContainer.addEventListener('click', (e) => {
-        const rect = progressContainer.getBoundingClientRect();
-        const pos = (e.clientX - rect.left) / rect.width;
-        audioElement.currentTime = pos * audioElement.duration;
-    });
-    
-    // Handle audio ended para reproductor principal
-    audioElement.addEventListener('ended', () => {
-        playPauseIcon.classList.remove('fa-pause');
-        playPauseIcon.classList.add('fa-play');
-        // Reset visualization
-        bars.forEach(bar => {
-            bar.style.animationPlayState = 'paused';
         });
     });
 });
