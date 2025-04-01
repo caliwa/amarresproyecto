@@ -332,8 +332,6 @@
     AOS.init();
 
     document.addEventListener('livewire:initialized', () => {
-    document.cookie = "timezone=" + Intl.DateTimeFormat().resolvedOptions().timeZone;
-
     // Inicializar Plyr si está disponible
     const audioElement = document.getElementById('audioElement');
     const playPauseBtn = document.getElementById('playPauseBtn');
@@ -562,6 +560,7 @@
 			<div class="message-bubble">
 				Hola! Te estoy esperando en el chat para agendar tu sesión de protección energética personalizada. ¿Hablamos?
                 <div class="message-time">{{ now()->format('h:i A') }}</div>
+
 			</div>
 		</div>
 		<div class="whatsapp-cta">
