@@ -591,8 +591,8 @@
     </div>
     <div class="player-controls">
         <div class="song-info">
-            <p class="song-title">Alicia Fuentes - Joaquín Pascal</p>
-            <p class="song-artist">Sanación & Protección</p>
+            <p class="song-title">Alicia Fuentes</p>
+            <p class="song-artist">Amor, sanacion & protección</p>
         </div>
         <div class="audio-player-wrapper">
             <button id="playPauseBtn" class="play-pause-btn">
