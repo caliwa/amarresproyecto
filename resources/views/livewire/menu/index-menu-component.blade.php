@@ -5,140 +5,187 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<style>
-		.whatsapp-container {
-            position: fixed;
-            bottom: 100px;
-            right: 20px;
-            z-index: 1000;
-        }
-        
-        .whatsapp-bubble {
-            position: relative;
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            width: 280px;
-            overflow: hidden;
-            animation: float 3s ease-in-out infinite;
-            transform-origin: center bottom;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .whatsapp-header {
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            color: white;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .profile-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid white;
-        }
-        
-        .header-info h3 {
-            margin: 0;
-            font-size: 16px;
-            font-weight: 600;
-        }
-        
-        .header-info p {
-            margin: 0;
-            font-size: 12px;
-            opacity: 0.9;
-        }
-        
-        .whatsapp-message {
-            padding: 15px;
-            background: #E5F7EE;
-        }
-        
-        .message-bubble {
-            background: white;
-            border-radius: 10px;
-            padding: 12px;
-            margin-bottom: 10px;
-            position: relative;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-        }
-        
-        .message-bubble::after {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 15px;
-            border-width: 8px 8px 8px 0;
-            border-style: solid;
-            border-color: transparent white transparent transparent;
-        }
-        
-        .message-time {
-            text-align: right;
-            font-size: 10px;
-            color: #8696A0;
-        }
-        
-        .whatsapp-cta {
-            display: flex;
-            padding: 12px;
-            background: white;
-        }
-        
-        .cta-button {
-            flex: 1;
-            background: #25D366;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            padding: 10px 15px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background: #128C7E;
-            transform: translateY(-2px);
-        }
-        
-        .notification-badge {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background: #FF3B30;
-            color: white;
-            border-radius: 50%;
-            width: 22px;
-            height: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: bold;
-            border: 2px solid white;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-        
+.whatsapp-container {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-bubble {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 280px;
+    overflow: hidden;
+    animation: float 3s ease-in-out infinite;
+    transform-origin: center bottom;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para la versión móvil */
+.whatsapp-mobile-icon {
+    display: none;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    animation: float 3s ease-in-out infinite;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-mobile-icon:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-header {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.header-info h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.header-info p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.whatsapp-message {
+    padding: 15px;
+    background: #E5F7EE;
+}
+
+.message-bubble {
+    background: white;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.message-bubble::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 15px;
+    border-width: 8px 8px 8px 0;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+.message-time {
+    text-align: right;
+    font-size: 10px;
+    color: #8696A0;
+}
+
+.whatsapp-cta {
+    display: flex;
+    padding: 12px;
+    background: white;
+}
+
+.cta-button {
+    flex: 1;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+.notification-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #FF3B30;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .whatsapp-bubble {
+        display: none;
+    }
+    
+    .whatsapp-mobile-icon {
+        display: flex;
+    }
+    
+    .whatsapp-container.expanded .whatsapp-bubble {
+        display: block;
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+    }
+    
+    .whatsapp-container.expanded .whatsapp-mobile-icon {
+        background: #128C7E;
+    }
+}
         /* Player styles */
         .player-container {
     position: fixed;
@@ -330,6 +377,24 @@
 <script>
 document.addEventListener('livewire:initialized', () => {
     
+    const whatsappContainer = document.querySelector('.whatsapp-container');
+    const mobileIcon = document.querySelector('.whatsapp-mobile-icon');
+    
+    // Función para cambiar entre mostrar burbujas y solo ícono
+    if (mobileIcon) {
+        mobileIcon.addEventListener('click', function() {
+            whatsappContainer.classList.toggle('expanded');
+        });
+    }
+    
+    // Cierra la burbuja si se hace clic fuera de ella
+    document.addEventListener('click', function(event) {
+        if (!whatsappContainer.contains(event.target) && whatsappContainer.classList.contains('expanded')) {
+            whatsappContainer.classList.remove('expanded');
+        }
+    });
+
+
     // Obtener elementos del reproductor principal
     const audioElement = document.getElementById('audioElement');
     const playPauseBtn = document.getElementById('playPauseBtn');
@@ -512,34 +577,36 @@ document.addEventListener('livewire:initialized', () => {
 <div>
 <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
 <!-- WhatsApp Button with Enhanced Notification -->
+
 <div class="whatsapp-container" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-	<div class="whatsapp-bubble">
-		<div class="whatsapp-header">
-			<div class="profile-icon">
+    <div class="whatsapp-bubble">
+        <div class="whatsapp-header">
+            <div class="profile-icon">
                 <i class="fas fa-headset"></i>
             </div>
-			<div class="header-info">
-				<h3>Laura Martínez</h3>
-				<p>Disponible ahora</p>
-			</div>
-		</div>
-		<div class="whatsapp-message">
-			<div class="message-bubble">
-				Hola! Te estoy esperando en el chat para agendar tu sesión de protección energética personalizada. ¿Hablamos?
+            <div class="header-info">
+                <h3>Laura Martínez</h3>
+                <p>Disponible ahora</p>
+            </div>
+        </div>
+        <div class="whatsapp-message">
+            <div class="message-bubble">
+                Hola! Te estoy esperando en el chat para agendar tu sesión de protección energética personalizada. ¿Hablamos?
                 <div class="message-time">{{ now()->format('h:i A') }}</div>
-
-			</div>
-		</div>
-		<div class="whatsapp-cta">
+            </div>
+        </div>
+        <div class="whatsapp-cta">
             <a href="https://wa.me/18147696863?text=Hola!%20Me%20gustaría%20solicitar%20una%20sesión%20de%20protección%20energética%20personalizada.%20¿Cuándo%20podríamos%20agendar%20mi%20primera%20consulta?" target="_blank" class="cta-button">
-              <i class="fab fa-whatsapp"></i>
-              Responder ahora
+                <i class="fab fa-whatsapp"></i>
+                Responder ahora
             </a>
-          </div>
-		<div class="notification-badge">1</div>
-	</div>
+        </div>
+        <div class="notification-badge">1</div>
+    </div>
+    <div class="whatsapp-mobile-icon">
+        <i class="fab fa-whatsapp"></i>
+    </div>
 </div>
-
 <!-- Full Width Audio Player -->
 <div class="player-container" id="playerContainer">
     <div class="player-header">
