@@ -1001,8 +1001,8 @@ document.addEventListener('livewire:initialized', () => {
                     </svg>
                   </div>
                   <div class="ml-3">
-                    <h4 class="text-purple-100 font-medium">Email</h4>
-                    <p class="text-purple-200/90">Contáctanos para agendar tu visita</p>
+                    {{-- <h4 class="text-purple-100 font-medium">Email</h4>
+                    <p class="text-purple-200/90">Contáctanos para agendar tu visita</p> --}}
                   </div>
                 </div>
                 
