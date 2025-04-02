@@ -994,18 +994,18 @@ document.addEventListener('livewire:initialized', () => {
                   </div>
                 </div>
                 
-                <div class="flex items-start">
+                {{-- <div class="flex items-start">
                   <div class="flex-shrink-0 w-6 h-6 text-yellow-300 mt-1">
                     <svg fill="currentColor" viewBox="0 0 24 24">
                       <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                   </div>
                   <div class="ml-3">
-                    {{-- <h4 class="text-purple-100 font-medium">Email</h4>
-                    <p class="text-purple-200/90">Contáctanos para agendar tu visita</p> --}}
+                    <h4 class="text-purple-100 font-medium">Email</h4>
+                    <p class="text-purple-200/90">Contáctanos para agendar tu visita</p>
                   </div>
                 </div>
-                
+                 --}}
                 <div class="flex items-start">
                   <div class="flex-shrink-0 w-6 h-6 text-yellow-300 mt-1">
                     <svg fill="currentColor" viewBox="0 0 24 24">
