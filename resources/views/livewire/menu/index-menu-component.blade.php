@@ -1140,7 +1140,7 @@ document.addEventListener('livewire:initialized', () => {
                 </div>
                 
                 <div class="text-center mt-12">
-                    <a onclick="document.getElementById('amarres-section').scrollIntoView({behavior: 'smooth',block: 'start'});" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+                    <a onclick="document.getElementById('amarres-section').scrollIntoView({behavior: 'smooth',block: 'start'});" class="button bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
                         Quiero mi consulta gratuita
                     </a>
                 </div>
