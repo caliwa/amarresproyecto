@@ -529,11 +529,11 @@ document.addEventListener('livewire:initialized', () => {
 			</div>
 		</div>
 		<div class="whatsapp-cta">
-			<a href="https://wa.me/TUNUMERO" target="_blank" class="cta-button">
-				<i class="fab fa-whatsapp"></i>
-				Responder ahora
-			</a>
-		</div>
+            <a href="https://wa.me/18147696863?text=Hola!%20Me%20gustaría%20solicitar%20una%20sesión%20de%20protección%20energética%20personalizada.%20¿Cuándo%20podríamos%20agendar%20mi%20primera%20consulta?" target="_blank" class="cta-button">
+              <i class="fab fa-whatsapp"></i>
+              Responder ahora
+            </a>
+          </div>
 		<div class="notification-badge">1</div>
 	</div>
 </div>
@@ -803,13 +803,13 @@ document.addEventListener('livewire:initialized', () => {
 					<p class="text-gray-500 mb-3">Los amarres y retornos de amor se adaptan a la situación del individuo que desee el hechizo de amor, para obtener el beneficio del cariño de la persona que este desea amarrar o retornar.
 					</p>
 					<div class="animate-pulse flex justify-center items-center gap-2">
-						<svg class="w-5 h-5" fill="#25D366" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-							<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-						</svg>
-						<a href="" class="text-green-500 hover:text-green-600 font-medium flex items-center transition-colors duration-200">
-							Más info
-						</a>
-					</div>
+                        <svg class="w-5 h-5" fill="#25D366" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <a href="https://wa.me/18147696863?text=Hola%2C%20me%20interesa%20conocer%20más%20información%20sobre%20sus%20servicios%20de%20protección%20energética.%20¿Podría%20compartirme%20detalles%20sobre%20las%20opciones%20disponibles%3F" class="text-green-500 hover:text-green-600 font-medium flex items-center transition-colors duration-200">
+                          Más info
+                        </a>
+                    </div>
 				</div>
 				<div class="lg:w-7/12 flex flex-col justify-between mt-12 space-y-5 lg:space-y-0 lg:mt-0">
 					<div class="flex space-x-5">
@@ -866,103 +866,283 @@ document.addEventListener('livewire:initialized', () => {
 			</div>
 		</div>
 
-		<!-- TESTIMONIAL -->
-<!-- TESTIMONIALS SECTION -->
-<div class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-red-600 mb-4">Testimonios de Nuestros Clientes</h2>
-        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Personas reales que han recuperado el amor gracias a nuestros servicios</p>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up">
-                <div class="flex gap-2 items-center mb-4">
-                    <div class="text-yellow-400 text-xl relative">
-                        ★★★★★
-                    </div>
-                    <span class="ml-2 text-gray-700 font-medium">4.8</span>
-                </div>
-                <p class="text-gray-700 mb-4 italic">"Después de 3 meses separados, mi esposo volvió a casa gracias al amarre. No podía creerlo cuando me pidió perdón y dijo que no podía vivir sin mí. ¡Funcionó en solo 2 semanas!"</p>
-                <p class="font-semibold text-gray-900">- María G. (Madrid)</p>
-                
-                <!-- Reproductor de audio personalizado -->
-                <div class="mt-4 testimonial-player" id="player1Container">
-                    <button class="play-pause-btn testimonial-btn" id="playButton1">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <div class="progress-container testimonial-progress">
-                        <div id="progressBar1" class="progress-bar"></div>
-                    </div>
-                    <div class="time-display testimonial-time" id="timeDisplay1">0:00</div>
-                    <!-- Audio element (hidden) -->
-                    <audio id="audio1" preload="metadata">
-                        <source src="{{ Storage::disk('private')->temporaryUrl('audios/mujer1.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
-                        Tu navegador no soporta el elemento de audio.
-                    </audio>
-                </div>
-            </div>
-            
-            
-           <!-- Testimonio 2 con audio personalizado - 5 estrellas -->
-            <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="150">
-                <div class="flex gap-2 items-center mb-4">
-                    <div class="text-yellow-400 text-xl">
-                        ★★★★★
-                    </div>
-                    <span class="ml-2 text-gray-700 font-medium">5.0</span>
-                </div>
-                <p class="text-gray-700 mb-4 italic">"Mi novia me había dejado por otro y estaba devastado. Contacté a Joaquín y en menos de un mes ella rompió con el otro y volvió arrepentida. ¡Los resultados son increíbles!"</p>
-                <p class="font-semibold text-gray-900">- Carlos R. (Barcelona)</p>
-                
-                <!-- Reproductor de audio personalizado -->
-                <div class="mt-4 testimonial-player" id="player2Container">
-                    <button class="play-pause-btn testimonial-btn" id="playButton2">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <div class="progress-container testimonial-progress">
-                        <div id="progressBar2" class="progress-bar"></div>
-                    </div>
-                    <div class="time-display testimonial-time" id="timeDisplay2">0:00</div>
-                    <!-- Audio element (hidden) -->
-                    <audio id="audio2" preload="metadata">
-                        <source src="{{ Storage::disk('private')->temporaryUrl('audios/hombre1.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
-                        Tu navegador no soporta el elemento de audio.
-                    </audio>
-                </div>
-            </div>
-            
-            <!-- Testimonio 3 - 4.5 estrellas -->
-            <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
-                <div class="flex gap-2 items-center mb-4">
-                    <div class="text-yellow-400 text-xl relative">
-                        ★★★★★
-                    </div>
-                    <span class="ml-2 text-gray-700 font-medium">4.5</span>
-                </div>
-                <p class="text-gray-700 mb-4 italic">"No creía en estas cosas pero estaba desesperada. Mi esposo llevaba 6 meses viviendo con otra mujer. Hice el ritual y en 3 semanas terminó esa relación y volvió a casa pidiendo reconciliación."</p>
-                <p class="font-semibold text-gray-900">- Laura M. (Valencia)</p>
-            </div>
-            
-            <!-- Testimonio 4 - Sin puntuación completa -->
-            <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="450">
-                <div class="flex gap-2 items-center mb-4">
-                    <div class="text-gray-300 text-xl">
-                        ★★★★★
-                    </div>
-                    <span class="ml-2 text-gray-500 font-medium">Sin calificar</span>
-                </div>
-                <p class="text-gray-700 mb-4 italic">"Después de 2 años divorciados, mi ex esposo empezó a buscarme constantemente tras el ritual. Ahora estamos reconstruyendo nuestra relación y más enamorados que nunca. ¡Gracias por devolverme mi familia!"</p>
-                <p class="font-semibold text-gray-900">- Ana T. (Sevilla)</p>
-            </div>
-        </div>
-        
-        <div class="text-center mt-12">
-            <a href="#contacto" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
-                Quiero mi consulta gratuita
-            </a>
-        </div>
+        <!-- Punto Físico - Sección Destacada -->
+<div data-aos="fade-up" class="mt-20 py-12 bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900 rounded-3xl shadow-2xl relative overflow-hidden">
+    <!-- Elementos decorativos de fondo -->
+    <div class="absolute top-0 left-0 w-full h-full">
+      <div class="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-xl"></div>
+      <div class="absolute bottom-10 right-10 w-40 h-40 bg-white/5 rounded-full blur-xl"></div>
+      <div class="absolute top-1/3 right-1/4 w-24 h-24 bg-purple-500/10 rounded-full blur-lg"></div>
     </div>
-</div>
-		
+    
+    <!-- Contenido principal -->
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <!-- Encabezado con decoración -->
+      <div class="flex items-center justify-center mb-8">
+        <div class="h-0.5 w-12 bg-purple-300"></div>
+        <div class="mx-4">
+          <span class="inline-block px-4 py-1 bg-purple-700 text-purple-100 text-xs font-medium tracking-wider uppercase rounded-full">Nuevo</span>
+        </div>
+        <div class="h-0.5 w-12 bg-purple-300"></div>
+      </div>
+      
+      <!-- Título principal animado -->
+      <h2 class="text-4xl md:text-5xl font-extrabold text-center text-white mb-6 tracking-tight">
+        <span class="animate-pulse">¡TE INVITAMOS A QUE CONOZCAS</span>
+        <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 to-yellow-400">NUESTRO PUNTO FÍSICO!</span>
+      </h2>
+      
+      <!-- Descripción -->
+      <p class="text-purple-100 text-center text-lg mb-10 max-w-3xl mx-auto">
+        Te brindaremos toda la información necesaria por nuestros canales de atención para que puedas visitarnos y experimentar nuestros servicios de protección energética en persona.
+      </p>
+      
+      <!-- Tarjeta de información del local -->
+      <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/30 shadow-xl">
+        <div class="flex flex-col md:flex-row gap-8">
+          <!-- Lado izquierdo - Imágenes y detalles -->
+          <div class="md:w-1/2">
+            <!-- Mini galería -->
+            <div class="grid grid-cols-3 gap-2 mb-6">
+              <div class="aspect-square bg-purple-800/70 rounded-lg overflow-hidden">
+                <div class="w-full h-full bg-gradient-to-br from-purple-500/20 to-purple-800/20 flex items-center justify-center">
+                  <svg class="w-10 h-10 text-purple-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm-1-17.93c-3.94.49-7 3.85-7 7.93s3.06 7.44 7 7.93V4.07z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="aspect-square bg-purple-800/70 rounded-lg overflow-hidden col-span-2">
+                <div class="w-full h-full bg-gradient-to-br from-purple-500/20 to-purple-800/20 flex items-center justify-center">
+                  <svg class="w-12 h-12 text-purple-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17 4v7l2 3v2h-6v5l-1 1-1-1v-5H5v-2l2-3V4c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2zM9 4v7.75L7.5 14h9L15 11.75V4H9z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="aspect-square bg-purple-800/70 rounded-lg overflow-hidden col-span-2">
+                <div class="w-full h-full bg-gradient-to-br from-purple-500/20 to-purple-800/20 flex items-center justify-center">
+                  <svg class="w-12 h-12 text-purple-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="aspect-square bg-purple-800/70 rounded-lg overflow-hidden">
+                <div class="w-full h-full bg-gradient-to-br from-purple-500/20 to-purple-800/20 flex items-center justify-center">
+                  <svg class="w-10 h-10 text-purple-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Características del local -->
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-700/50 flex items-center justify-center mr-3">
+                  <svg class="w-5 h-5 text-purple-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-purple-100 font-semibold">Espacio acogedor</h4>
+                  <p class="text-purple-200/80 text-sm">Ambiente diseñado para tu confort espiritual</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-700/50 flex items-center justify-center mr-3">
+                  <svg class="w-5 h-5 text-purple-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-purple-100 font-semibold">Ubicación estratégica</h4>
+                  <p class="text-purple-200/80 text-sm">Fácil acceso y estacionamiento disponible</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-700/50 flex items-center justify-center mr-3">
+                  <svg class="w-5 h-5 text-purple-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="text-purple-100 font-semibold">Horario extendido</h4>
+                  <p class="text-purple-200/80 text-sm">Atención personalizada con cita previa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Lado derecho - Información de contacto y CTA -->
+          <div class="md:w-1/2 flex flex-col justify-between">
+            <div>
+              <h3 class="text-2xl font-bold text-white mb-4">Información de contacto</h3>
+              
+              <!-- Detalles de contacto -->
+              <div class="space-y-5 mb-8">
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 w-6 h-6 text-yellow-300 mt-1">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                  </div>
+                  <div class="ml-3">
+                    <h4 class="text-purple-100 font-medium">Dirección</h4>
+                    <p class="text-purple-200/90">Solicita nuestra ubicación exacta por WhatsApp</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 w-6 h-6 text-yellow-300 mt-1">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                  </div>
+                  <div class="ml-3">
+                    <h4 class="text-purple-100 font-medium">Email</h4>
+                    <p class="text-purple-200/90">Contáctanos para agendar tu visita</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="flex-shrink-0 w-6 h-6 text-yellow-300 mt-1">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                  </div>
+                  <div class="ml-3">
+                    <h4 class="text-purple-100 font-medium">Teléfono</h4>
+                    <p class="text-purple-200/90">+1 814 769 6863</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Botón CTA -->
+            <div class="mt-4">
+              <a href="https://wa.me/18147696863?text=Hola%2C%20me%20gustaría%20agendar%20una%20visita%20a%20su%20local%20físico%20para%20conocer%20más%20sobre%20sus%20servicios%20energéticos.%20¿Podrían%20proporcionarme%20la%20dirección%20y%20los%20horarios%20disponibles%3F" class="block w-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg shadow-yellow-500/25 text-center">
+                <div class="flex items-center justify-center">
+                  <svg class="w-6 h-6 mr-2" fill="#25D366" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>              
+                  </svg>
+                  Agendar visita ahora
+                </div>
+              </a>
+              
+              <p class="text-xs text-center text-purple-200/70 mt-3">Respuesta garantizada en menos de 24 horas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Pie de la sección -->
+      <div class="mt-8 text-center">
+        <p class="text-purple-200/80 text-sm">
+          <span class="font-semibold">⭐ Más de 1000 clientes satisfechos</span> • Ambiente seguro y discreto • Estacionamiento disponible
+        </p>
+      </div>
+    </div>
+  </div>
+
+                <!-- TESTIMONIAL -->
+        <!-- TESTIMONIALS SECTION -->
+        <div class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-red-600 mb-4">Testimonios de Nuestros Clientes</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Personas reales que han recuperado el amor gracias a nuestros servicios</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up">
+                        <div class="flex gap-2 items-center mb-4">
+                            <div class="text-yellow-400 text-xl relative">
+                                ★★★★★
+                            </div>
+                            <span class="ml-2 text-gray-700 font-medium">4.8</span>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">"Después de 3 meses separados, mi esposo volvió a casa gracias al amarre. No podía creerlo cuando me pidió perdón y dijo que no podía vivir sin mí. ¡Funcionó en solo 2 semanas!"</p>
+                        <p class="font-semibold text-gray-900">- María G. (Madrid)</p>
+                        
+                        <!-- Reproductor de audio personalizado -->
+                        <div class="mt-4 testimonial-player" id="player1Container">
+                            <button class="play-pause-btn testimonial-btn" id="playButton1">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container testimonial-progress">
+                                <div id="progressBar1" class="progress-bar"></div>
+                            </div>
+                            <div class="time-display testimonial-time" id="timeDisplay1">0:00</div>
+                            <!-- Audio element (hidden) -->
+                            <audio id="audio1" preload="metadata">
+                                <source src="{{ Storage::disk('private')->temporaryUrl('audios/mujer1.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                    </div>
+                    
+                    
+                <!-- Testimonio 2 con audio personalizado - 5 estrellas -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="150">
+                        <div class="flex gap-2 items-center mb-4">
+                            <div class="text-yellow-400 text-xl">
+                                ★★★★★
+                            </div>
+                            <span class="ml-2 text-gray-700 font-medium">5.0</span>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">"Mi novia me había dejado por otro y estaba devastado. Contacté a Joaquín y en menos de un mes ella rompió con el otro y volvió arrepentida. ¡Los resultados son increíbles!"</p>
+                        <p class="font-semibold text-gray-900">- Carlos R. (Barcelona)</p>
+                        
+                        <!-- Reproductor de audio personalizado -->
+                        <div class="mt-4 testimonial-player" id="player2Container">
+                            <button class="play-pause-btn testimonial-btn" id="playButton2">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <div class="progress-container testimonial-progress">
+                                <div id="progressBar2" class="progress-bar"></div>
+                            </div>
+                            <div class="time-display testimonial-time" id="timeDisplay2">0:00</div>
+                            <!-- Audio element (hidden) -->
+                            <audio id="audio2" preload="metadata">
+                                <source src="{{ Storage::disk('private')->temporaryUrl('audios/hombre1.m4a', now()->addMinutes(30)) }}" type="audio/mp4">
+                                Tu navegador no soporta el elemento de audio.
+                            </audio>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonio 3 - 4.5 estrellas -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex gap-2 items-center mb-4">
+                            <div class="text-yellow-400 text-xl relative">
+                                ★★★★★
+                            </div>
+                            <span class="ml-2 text-gray-700 font-medium">4.5</span>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">"No creía en estas cosas pero estaba desesperada. Mi esposo llevaba 6 meses viviendo con otra mujer. Hice el ritual y en 3 semanas terminó esa relación y volvió a casa pidiendo reconciliación."</p>
+                        <p class="font-semibold text-gray-900">- Laura M. (Valencia)</p>
+                    </div>
+                    
+                    <!-- Testimonio 4 - Sin puntuación completa -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="450">
+                        <div class="flex gap-2 items-center mb-4">
+                            <div class="text-gray-300 text-xl">
+                                ★★★★★
+                            </div>
+                            <span class="ml-2 text-gray-500 font-medium">Sin calificar</span>
+                        </div>
+                        <p class="text-gray-700 mb-4 italic">"Después de 2 años divorciados, mi ex esposo empezó a buscarme constantemente tras el ritual. Ahora estamos reconstruyendo nuestra relación y más enamorados que nunca. ¡Gracias por devolverme mi familia!"</p>
+                        <p class="font-semibold text-gray-900">- Ana T. (Sevilla)</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#contacto" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+                        Quiero mi consulta gratuita
+                    </a>
+                </div>
+            </div>
+        </div>
+                
 	</div>
 	<!-- .container -->
 
