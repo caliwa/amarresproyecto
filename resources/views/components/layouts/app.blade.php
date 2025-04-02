@@ -30,8 +30,8 @@
         <meta name="theme-color" content="#000000">
         
         <!-- Favicon -->
-        {{-- <link rel="icon" type="image/x-icon" href="{{ Storage::disk('private')->temporaryUrl('img/favicon.ico', now()->addMinutes(30)) }}">
-        <link rel="apple-touch-icon" href="{{ Storage::disk('private')->temporaryUrl('img/favicon.ico', now()->addMinutes(30)) }}"> --}}
+        <link rel="icon" type="image/x-icon" href="{{ Storage::disk('private')->temporaryUrl('img/favicon.ico', now()->addMinutes(30)) }}">
+        <link rel="apple-touch-icon" href="{{ Storage::disk('private')->temporaryUrl('img/favicon.ico', now()->addMinutes(30)) }}"> 
         
         <!-- Preload critical resources -->
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -47,7 +47,7 @@
             <div class="max-w-lg mx-auto">
                 <div class="flex py-12 justify-center text-white items-center px-20 sm:px-36">
                     <div class="relative">
-                        <h1 class="font-bold text-xl pr-5 relative z-40">A&E</h1>
+                        <h2 class="font-bold text-xl pr-5 relative z-40">A&E</h2>
 					    {{-- <img src="{{ Storage::disk('private')->temporaryUrl('img/corazon-logo.png', now()->addMinutes(30)) }}" class="h-11 z-30 absolute -top-2 -left-5"> --}}
 
                     </div>

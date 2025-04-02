@@ -613,9 +613,9 @@ document.addEventListener('livewire:initialized', () => {
 		<div class="max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
 			<!--Left Col-->
 			<div class="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 lg:items-start lg:text-left text-center mb-5 md:mb-0">
-				<h1 data-aos="fade-right" data-aos-once="true" class="my-4 text-4xl font-bold leading-tight text-darken">
+				<h2 data-aos="fade-right" data-aos-once="true" class="my-4 text-4xl font-bold leading-tight text-darken">
 					<span class="text-red-700 text-5xl">Recupere a su amado</span> mantenga a los indeseados fuera de su relación. <br> Asegure la permanencia del amor.
-				</h1>
+				</h2>
 				<p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="sm:pl-[20px] text-2xl mb-8">Obtenga resultados y un amor auténtico</p>
 				<div data-aos="fade-up" data-aos-once="true" data-aos-delay="700" class="w-full md:flex items-center justify-center lg:justify-start md:space-x-5">
 					<button onclick="document.getElementById('amarres-section').scrollIntoView({behavior: 'smooth',block: 'start'});" class="cursor-pointer lg:mx-0 bg-red-500 text-white text-xl font-bold rounded-full py-4 px-9 focus:outline-none transform transition hover:scale-110 duration-300 ease-in-out">
@@ -709,7 +709,7 @@ document.addEventListener('livewire:initialized', () => {
 						<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="white"/>
 					</svg>
 				</div>
-				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Amarres de Amor</h1>
+				<h2 class="font-medium text-xl mb-3 lg:px-14 text-darken">Amarres de Amor</h2>
 				<p class="px-4 text-gray-500">Contamos con la sabiduría y toda la experiencia para traer de vuelta a su ser querido de manera efectiva.</p>
 			</div>
 		
@@ -719,7 +719,7 @@ document.addEventListener('livewire:initialized', () => {
 						<path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" fill="white"/>
 					</svg>
 				</div>
-				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Conjuros</h1>
+				<h2 class="font-medium text-xl mb-3 lg:px-14 text-darken">Conjuros</h2>
 				<p class="px-4 text-gray-500">Reciba un apoyo adicional que lo encaminará hacia la solución de sus problemas afectivos.</p>
 			</div>
 		
@@ -729,7 +729,7 @@ document.addEventListener('livewire:initialized', () => {
 						<path d="M12 2v20m-7-7l7 7l7-7M7.05 8.1C5.05 6.1 4 4.5 4 3c0-1.1.9-2 2-2c1.5 0 3 1.1 5 3c2-1.9 3.5-3 5-3c1.1 0 2 .9 2 2c0 1.5-1.05 3.1-3.05 5.1L12 11l-4.95-2.9z" stroke="white" stroke-width="2"/>
 					</svg>
 				</div>
-				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Rituales</h1>
+				<h2 class="font-medium text-xl mb-3 lg:px-14 text-darken">Rituales</h2>
 				<p class="px-4 text-gray-500">Practique un ritual que eleve su productividad y optimice su rendimiento en el trabajo.</p>
 			</div>
 		
@@ -739,7 +739,7 @@ document.addEventListener('livewire:initialized', () => {
 						<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="white"/>
 					</svg>
 				</div>
-				<h1 class="font-medium text-xl mb-3 lg:px-14 text-darken">Limpiezas</h1>
+				<h2 class="font-medium text-xl mb-3 lg:px-14 text-darken">Limpiezas</h2>
 				<p class="px-4 text-gray-500">Purificamos las energías negativas que lo están debilitando espiritualmente.</p>
 			</div>
 		</div>
@@ -764,7 +764,7 @@ document.addEventListener('livewire:initialized', () => {
 						<svg class="w-8 h-8 text-white animate-pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12 9V14M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 17H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 						</svg>
-						<h1 class="text-4xl font-black text-white tracking-wider">ADVERTENCIA</h1>
+						<h2 class="text-4xl font-black text-white tracking-wider">ADVERTENCIA</h2>
 						<svg class="w-8 h-8 text-white animate-pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12 9V14M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 17H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 						</svg>
@@ -791,7 +791,7 @@ document.addEventListener('livewire:initialized', () => {
 
 					<!-- Latest News and Resources -->
 			<div data-aos="zoom-in" class="mt-16 text-center">
-				<h1 class="text-darken text-2xl font-semibold">NUESTROS SERVICIOS</h1>
+				<h2 class="text-darken text-2xl font-semibold">NUESTROS SERVICIOS</h2>
 				<p class="text-gray-500 my-5">Practicamos los más poderosos rituales MILENARIOS para el amor y la suerte, es hora de cambiar su vida, además limpiamos esas malas energías que por lo general lo destruyen, y como es de esperar se presentan en cada situación.</p>
 			</div>
 			<div data-aos="zoom-in-up" class="my-14 flex flex-col lg:flex-row lg:space-x-20">
@@ -799,7 +799,7 @@ document.addEventListener('livewire:initialized', () => {
 					<img class="w-full mb-6 rounded-md" src="{{ Storage::disk('private')->temporaryUrl('img/rituales.jpg', now()->addMinutes(30)) }}">
 				
 					<span class="animate-pulse bg-yellow-300 text-darken font-semibold px-4 py-px text-sm rounded-full">Más vendido!</span>
-					<h1 class="text-gray-800 font-semibold my-3 text-xl">AMARRES Y RETORNOS DE AMOR</h1>
+					<h2 class="text-gray-800 font-semibold my-3 text-xl">AMARRES Y RETORNOS DE AMOR</h2>
 					<p class="text-gray-500 mb-3">Los amarres y retornos de amor se adaptan a la situación del individuo que desee el hechizo de amor, para obtener el beneficio del cariño de la persona que este desea amarrar o retornar.
 					</p>
 					<div class="animate-pulse flex justify-center items-center gap-2">
@@ -820,7 +820,7 @@ document.addEventListener('livewire:initialized', () => {
 							</div>
 						</div>
 						<div class="w-8/12">
-							<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">HECHIZOS DE AMOR</h1>
+							<h2 class="text-gray-800 text-sm sm:text-lg font-semibold">HECHIZOS DE AMOR</h2>
 							<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">Los hechizos usan fotos, nombres y fechas de nacimiento, y pueden incluir velas, esencias, rezos, quemas y endulzamientos.</p>
 						</div>
 					</div>
@@ -832,7 +832,7 @@ document.addEventListener('livewire:initialized', () => {
 							</div>
 						</div>
 						<div class="w-8/12">
-							<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">UNIÓN DE PAREJAS</h1>
+							<h2 class="text-gray-800 text-sm sm:text-lg font-semibold">UNIÓN DE PAREJAS</h2>
 							<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">La magia erótica une a dos personas al guardar en un candado objetos personales de ambos.</p>
 						</div>
 					</div>
@@ -844,7 +844,7 @@ document.addEventListener('livewire:initialized', () => {
 							</div>
 						</div>
 						<div class="w-8/12">
-							<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">LIMPIEZA ESPÍRITUAL</h1>
+							<h2 class="text-gray-800 text-sm sm:text-lg font-semibold">LIMPIEZA ESPÍRITUAL</h2>
 							<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">Si te sientes agotado, con pensamientos negativos o tristeza, necesitas purificar tu energía y espíritu.
 
 							</p>
@@ -858,7 +858,7 @@ document.addEventListener('livewire:initialized', () => {
 							</div>
 						</div>
 						<div class="w-8/12">
-							<h1 class="text-gray-800 text-sm sm:text-lg font-semibold">RITUALES DE ATRACCIÓN</h1>
+							<h2 class="text-gray-800 text-sm sm:text-lg font-semibold">RITUALES DE ATRACCIÓN</h2>
 							<p class="text-gray-500 my-2 sm:my-4 text-xs sm:text-md">Los rituales de atracción buscan atraer energías positivas, prosperidad, cumplir deseos o enamorar a alguien.</p>
 						</div>
 					</div>
