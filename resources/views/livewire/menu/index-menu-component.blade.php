@@ -515,7 +515,9 @@ document.addEventListener('livewire:initialized', () => {
 <div class="whatsapp-container" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
 	<div class="whatsapp-bubble">
 		<div class="whatsapp-header">
-			<img src="/api/placeholder/50/50" alt="Profile" class="profile-img">
+			<div class="profile-icon">
+                <i class="fas fa-headset"></i>
+            </div>
 			<div class="header-info">
 				<h3>Laura Martínez</h3>
 				<p>Disponible ahora</p>
@@ -1034,6 +1036,12 @@ document.addEventListener('livewire:initialized', () => {
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <article class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up">
+                        <!-- Imagen de usuario añadida -->
+                        <div class="flex justify-center mb-4">
+                            <img src="{{ Storage::disk('private')->temporaryUrl('img/testimonio4.jpg', now()->addMinutes(30)) }}" 
+                                 alt="María G." 
+                                 class="w-20 h-20 rounded-full object-cover border-2 border-red-400">
+                        </div>
                         <div class="flex gap-2 items-center mb-4">
                             <div class="text-yellow-400 text-xl relative">
                                 ★★★★★
@@ -1041,7 +1049,7 @@ document.addEventListener('livewire:initialized', () => {
                             <span class="ml-2 text-gray-700 font-medium">4.8</span>
                         </div>
                         <p class="text-gray-700 mb-4 italic">"Después de 3 meses separados, mi esposo volvió a casa gracias al amarre. No podía creerlo cuando me pidió perdón y dijo que no podía vivir sin mí. ¡Funcionó en solo 2 semanas!"</p>
-                        <p class="font-semibold text-gray-900">- María G. (Madrid)</p>
+                        <p class="font-semibold text-gray-900">- María G. (Boston Massachusetts)</p>
                         
                         <!-- Reproductor de audio personalizado -->
                         <div class="mt-4 testimonial-player" id="player1Container">
@@ -1062,6 +1070,12 @@ document.addEventListener('livewire:initialized', () => {
                     
                     <!-- Testimonio 2 con audio personalizado - 5 estrellas -->
                     <article class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="150">
+                        <!-- Imagen de usuario añadida -->
+                        <div class="flex justify-center mb-4">
+                            <img src="{{ Storage::disk('private')->temporaryUrl('img/testimonio2.jpg', now()->addMinutes(30)) }}" 
+                                 alt="Carlos R." 
+                                 class="w-20 h-20 rounded-full object-cover border-2 border-red-400">
+                        </div>
                         <div class="flex gap-2 items-center mb-4">
                             <div class="text-yellow-400 text-xl">
                                 ★★★★★
@@ -1069,7 +1083,7 @@ document.addEventListener('livewire:initialized', () => {
                             <span class="ml-2 text-gray-700 font-medium">5.0</span>
                         </div>
                         <p class="text-gray-700 mb-4 italic">"Mi novia me había dejado por otro y estaba devastado. Contacté a Joaquín y en menos de un mes ella rompió con el otro y volvió arrepentida. ¡Los resultados son increíbles!"</p>
-                        <p class="font-semibold text-gray-900">- Carlos R. (Barcelona)</p>
+                        <p class="font-semibold text-gray-900">- Carlos R. (El Paso Texas)</p>
                         
                         <!-- Reproductor de audio personalizado -->
                         <div class="mt-4 testimonial-player" id="player2Container">
@@ -1090,6 +1104,12 @@ document.addEventListener('livewire:initialized', () => {
                     
                     <!-- Testimonio 3 - 4.5 estrellas -->
                     <article class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <!-- Imagen de usuario añadida -->
+                        <div class="flex justify-center mb-4">
+                            <img src="{{ Storage::disk('private')->temporaryUrl('img/testimonio2.jpg', now()->addMinutes(30)) }}" 
+                                 alt="Laura M." 
+                                 class="w-20 h-20 rounded-full object-cover border-2 border-red-400">
+                        </div>
                         <div class="flex gap-2 items-center mb-4">
                             <div class="text-yellow-400 text-xl relative">
                                 ★★★★★
@@ -1097,11 +1117,17 @@ document.addEventListener('livewire:initialized', () => {
                             <span class="ml-2 text-gray-700 font-medium">4.5</span>
                         </div>
                         <p class="text-gray-700 mb-4 italic">"No creía en estas cosas pero estaba desesperada. Mi esposo llevaba 6 meses viviendo con otra mujer. Hice el ritual y en 3 semanas terminó esa relación y volvió a casa pidiendo reconciliación."</p>
-                        <p class="font-semibold text-gray-900">- Laura M. (Valencia)</p>
+                        <p class="font-semibold text-gray-900">- Laura M. (Hartford Connecticut)</p>
                     </article>
                     
                     <!-- Testimonio 4 - Sin puntuación completa -->
                     <article class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="450">
+                        <!-- Imagen de usuario añadida -->
+                        <div class="flex justify-center mb-4">
+                            <img src="{{ Storage::disk('private')->temporaryUrl('img/testimonio3.jpg', now()->addMinutes(30)) }}" 
+                                 alt="Ana T." 
+                                 class="w-20 h-20 rounded-full object-cover border-2 border-red-400">
+                        </div>
                         <div class="flex gap-2 items-center mb-4">
                             <div class="text-gray-300 text-xl">
                                 ★★★★★
@@ -1109,7 +1135,7 @@ document.addEventListener('livewire:initialized', () => {
                             <span class="ml-2 text-gray-500 font-medium">Sin calificar</span>
                         </div>
                         <p class="text-gray-700 mb-4 italic">"Después de 2 años divorciados, mi ex esposo empezó a buscarme constantemente tras el ritual. Ahora estamos reconstruyendo nuestra relación y más enamorados que nunca. ¡Gracias por devolverme mi familia!"</p>
-                        <p class="font-semibold text-gray-900">- Ana T. (Sevilla)</p>
+                        <p class="font-semibold text-gray-900">- Ana T. (St Louis Missouric)</p>
                     </article>
                 </div>
                 
