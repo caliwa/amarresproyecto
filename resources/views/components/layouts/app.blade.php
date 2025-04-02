@@ -6,7 +6,7 @@
         
         <!-- Primary Meta Tags -->
         <meta name="title" content="Amarres de Amor | Soluciones Espirituales para Problemas Afectivos">
-        <meta name="description" content="Ofrecemos amarres de amor efectivos, conjuros, rituales y limpiezas espirituales para traer de vuelta a su ser querido y solucionar problemas afectivos con sabiduría y experiencia.">
+        <meta name="description" content="Ofrecemos amarres de amor efectivos, conjuros, rituales y limpiezas espirituales para recuperar a su ser querido y resolver problemas afectivos con sabiduría ancestral.">
         <meta name="robots" content="index, follow">
         <meta name="author" content="Amarres de Amor y Endulzamiento">
 
