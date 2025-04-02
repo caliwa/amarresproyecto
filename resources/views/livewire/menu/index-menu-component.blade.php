@@ -1072,7 +1072,7 @@ document.addEventListener('livewire:initialized', () => {
                     <article class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="150">
                         <!-- Imagen de usuario añadida -->
                         <div class="flex justify-center mb-4">
-                            <img src="{{ Storage::disk('private')->temporaryUrl('img/testimonios/testimonio2.jpeg', now()->addMinutes(30)) }}" 
+                            <img src="{{ Storage::disk('private')->temporaryUrl('img/testimonios/testimonio2.jpg', now()->addMinutes(30)) }}" 
                                  alt="Carlos R." 
                                  class="w-20 h-20 rounded-full object-cover border-2 border-red-400">
                         </div>
@@ -1106,7 +1106,7 @@ document.addEventListener('livewire:initialized', () => {
                     <article class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
                         <!-- Imagen de usuario añadida -->
                         <div class="flex justify-center mb-4">
-                            <img src="{{ Storage::disk('private')->temporaryUrl('img/testimonios/testimonio2.jpg', now()->addMinutes(30)) }}" 
+                            <img src="{{ Storage::disk('private')->temporaryUrl('img/testimonios/testimonio1.jpg', now()->addMinutes(30)) }}" 
                                  alt="Laura M." 
                                  class="w-20 h-20 rounded-full object-cover border-2 border-red-400">
                         </div>
