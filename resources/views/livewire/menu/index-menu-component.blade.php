@@ -575,7 +575,6 @@ document.addEventListener('livewire:initialized', () => {
 });
 </script>
 @endscript
-<div>
 <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
 <!-- WhatsApp Button with Enhanced Notification -->
 
