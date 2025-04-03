@@ -27,7 +27,7 @@
         <!-- Canonical URL -->
         <link rel="canonical" href="https://amarresdeamoryendulzamiento.com/">
 
-        <meta name="google-site-verification" content="oplgW7QmVA_pVv1OU3iBYpMvtcyyRYqn_EdMLX6FuGk" />
+        <meta name="google-site-verification" content="gzyKSwp17XcgUfwMjnqElW416adnFYBXxoTDRAyZIzE" />
         <meta name="theme-color" content="#000000">
         
         <!-- Favicon -->
