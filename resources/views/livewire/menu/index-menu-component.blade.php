@@ -656,7 +656,7 @@ document.addEventListener('livewire:initialized', () => {
         <div class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row">
             <div class="flex flex-row items-center justify-between py-6">
                 <div class="relative md:mt-8">
-                    <a href="#" class="text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">Amarres y endulzamientos</a>
+                    <h1 class="text-lg relative z-50 font-bold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline">Amarres y endulzamientos</h1>
                     <img src="{{ Storage::disk('private')->temporaryUrl('img/corazon-logo.png', now()->addMinutes(30)) }}" class="h-11 z-40 absolute -top-2 -left-5" alt="Logo corazón">
                 </div>
             </div>
@@ -759,7 +759,7 @@ document.addEventListener('livewire:initialized', () => {
 
         <!-- All-In-One Cloud Software. -->
         <article data-aos="flip-up" class="max-w-xl mx-auto text-center mt-10">
-            <h1 class="font-bold text-darken my-3 text-2xl">Amarres de <span class="text-red-500">amor</span></h1>
+            <h2 class="font-bold text-darken my-3 text-2xl">Amarres de <span class="text-red-500">amor</span></h2>
             <p class="leading-relaxed text-gray-500">Desde que tu ser querido se distanció, ha experimentado angustia, desequilibrio emocional, insomnio y agotamiento. Detén ese sufrimiento, con nuestros rituales de amor, recobra tu paz, tu bienestar y recupera la felicidad. Nuestro mentor y maestro espiritual <br> <span class="font-semibold text-lg">Joaquín Pascal</span><br> junto todo un equipo de profesionales están aquí para asistirte y ofrecerte orientación. </p>
         </article>
         <!-- card -->
