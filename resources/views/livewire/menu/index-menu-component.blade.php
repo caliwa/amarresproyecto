@@ -585,7 +585,7 @@ document.addEventListener('livewire:initialized', () => {
                 <i class="fas fa-headset"></i>
             </div>
             <div class="header-info">
-                <h3>Laura Martínez</h3>
+                <p class="text-xl font-semibold">Laura Martínez</p>
                 <p>Disponible ahora</p>
             </div>
         </div>
