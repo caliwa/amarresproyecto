@@ -1177,7 +1177,7 @@ document.addEventListener('livewire:initialized', () => {
                             </div>
                             <span class="ml-2 text-gray-700 font-medium">4.5</span>
                         </div>
-                        <p class="text-gray-700 mb-4 italic">"No creía en estas cosas pero estaba desesperada. Mi esposo llevaba 6 meses viviendo con otra mujer. Hice el ritual y en 3 semanas terminó esa relación y volvió a casa pidiendo reconciliación."</p>
+                        <p class="text-gray-700 mb-4 italic">"Conocí a Don Joaquín a finales de la pandemia, había quedado sin empleo y prácticamente sin esperanzas, ya estaba a punto de rendirme, pero Dios me puso al maestro en mi camino y hoy en día salí de ese pozo gracias a él"</p>
                         <p class="font-semibold text-gray-900">- Laura M. (Hartford Connecticut)</p>
                     </article>
                     
@@ -1195,7 +1195,7 @@ document.addEventListener('livewire:initialized', () => {
                             </div>
                             <span class="ml-2 text-gray-500 font-medium">Sin calificar</span>
                         </div>
-                        <p class="text-gray-700 mb-4 italic">"Después de 2 años divorciados, mi ex esposo empezó a buscarme constantemente tras el ritual. Ahora estamos reconstruyendo nuestra relación y más enamorados que nunca. ¡Gracias por devolverme mi familia!"</p>
+                        <p class="text-gray-700 mb-4 italic">"Conocí a Don Joaquín a finales de la pandemia, había quedado sin empleo y prácticamente sin esperanzas, ya estaba a punto de rendirme, pero Dios me puso al maestro en mi camino y hoy en día salí de ese pozo gracias a él"</p>
                         <p class="font-semibold text-gray-900">- Ana T. (St Louis Missouric)</p>
                     </article>
                 </div>
