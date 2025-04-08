@@ -1109,7 +1109,7 @@ document.addEventListener('livewire:initialized', () => {
                             </div>
                             <span class="ml-2 text-gray-700 font-medium">4.8</span>
                         </div>
-                        <p class="text-gray-700 mb-4 italic">"Después de 3 meses separados, mi esposo volvió a casa gracias al amarre. No podía creerlo cuando me pidió perdón y dijo que no podía vivir sin mí. ¡Funcionó en solo 2 semanas!"</p>
+                        <p class="text-gray-700 mb-4 italic">“Mi problema más grande era la relación con mi hijo y su consumo desenfrenado que me llevo prácticamente a la ruina económica. Conocí al maestro y su equipo gracias a las redes sociales a mediados de 2023 en el punto más crítico de mi vida y gracias a su ayuda mi hijo se ha renovado y la paz ha regresado a mi hogar”</p>
                         <p class="font-semibold text-gray-900">- María G. (Boston Massachusetts)</p>
                         
                         <!-- Reproductor de audio personalizado -->
@@ -1143,7 +1143,7 @@ document.addEventListener('livewire:initialized', () => {
                             </div>
                             <span class="ml-2 text-gray-700 font-medium">5.0</span>
                         </div>
-                        <p class="text-gray-700 mb-4 italic">"Mi novia me había dejado por otro y estaba devastado. Contacté a Joaquín y en menos de un mes ella rompió con el otro y volvió arrepentida. ¡Los resultados son increíbles!"</p>
+                        <p class="text-gray-700 mb-4 italic">"Mi proceso con Joaquín ha sido demasiado favorable y hasta me sorprendió lo rápido que su mano poderosa tuvo efecto en mi vida. Llevo 2 años seguidos trabajando con con él y pude reconstruir mi hogar cuando ya no tenía nada"</p>
                         <p class="font-semibold text-gray-900">- Carlos R. (El Paso Texas)</p>
                         
                         <!-- Reproductor de audio personalizado -->
