@@ -33,6 +33,27 @@
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="{{ Storage::disk('private')->temporaryUrl('img/favicon.ico', now()->addMinutes(30)) }}">
         <link rel="apple-touch-icon" href="{{ Storage::disk('private')->temporaryUrl('img/favicon.ico', now()->addMinutes(30)) }}"> 
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16997020947"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16997020947');
+        </script>
+
+        <!-- Event snippet for Clic saliente conversion page -->
+        <script>
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16997020947/SjmSCNW-_bYaEJPq56g_',
+                'value': 1.0,
+                'currency': 'COP'
+            });
+        </script>
+        
+
         
         <!-- Preload critical resources -->
         <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
