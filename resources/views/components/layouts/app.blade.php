@@ -39,6 +39,15 @@
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"></noscript>
 
         <title>Amarres de Amor | Soluciones Espirituales para Problemas Afectivos</title>
+        <!-- Event snippet for Clic saliente conversion page -->
+        <script>
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16997020947/SjmSCNW-_bYaEJPq56g_',
+                'value': 1.0,
+                'currency': 'COP'
+            });
+        </script>
+  
         @livewireStyles
         @vite('resources/css/app.css')
     </head>
