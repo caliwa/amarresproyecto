@@ -1,4 +1,13 @@
 @assets
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16997020947">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16997020947');
+    </script>
 	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
