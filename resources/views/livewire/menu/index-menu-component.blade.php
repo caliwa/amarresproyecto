@@ -931,7 +931,7 @@ document.addEventListener('livewire:initialized', () => {
         </section>
 
         <!-- Punto Físico - Sección Destacada -->
-        {{-- <section data-aos="fade-up" class="mt-20 py-12 bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900 rounded-3xl shadow-2xl relative overflow-hidden">
+        <section data-aos="fade-up" class="mt-20 py-12 bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900 rounded-3xl shadow-2xl relative overflow-hidden">
             <!-- Elementos decorativos de fondo -->
             <div class="absolute top-0 left-0 w-full h-full">
                 <div class="absolute top-10 left-10 w-32 h-32 bg-white/5 rounded-full blur-xl"></div>
@@ -1096,7 +1096,7 @@ document.addEventListener('livewire:initialized', () => {
                     </p>
                 </div>
             </div>
-        </section> --}}
+        </section>
 
         <!-- TESTIMONIALS SECTION -->
         <section class="py-16 bg-gray-50">
