@@ -962,7 +962,7 @@ document.addEventListener('livewire:initialized', () => {
                 </p>
                 
                 <!-- Tarjeta de información del local -->
-                <article class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/30 shadow-xl">
+                {{-- <article class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-300/30 shadow-xl">
                     <div class="flex flex-col md:flex-row gap-8">
                         <!-- Lado izquierdo - Imágenes y detalles -->
                         <div class="md:w-1/2">
@@ -1087,7 +1087,7 @@ document.addEventListener('livewire:initialized', () => {
                             </div>
                         </div>
                     </div>
-                </article>
+                </article> --}}
                 
                 <!-- Pie de la sección -->
                 <div class="mt-8 text-center">
